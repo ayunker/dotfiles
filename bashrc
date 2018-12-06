@@ -22,6 +22,10 @@ alias rsu='rspec --tag ~type:feature'
 alias mpa='cd ~/src/mp_admin'
 alias mpd='cd ~/src/mp_dotcom'
 
+# secrets
+if [ -f ~/.secrets.sh ]; then
+  source ~/.secrets.sh
+fi
 
 export CLICOLOR=1
 
