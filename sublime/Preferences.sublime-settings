@@ -1,0 +1,32 @@
+{
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (light).sublime-color-scheme",
+	"ensure_newline_at_eof_on_save": true,
+	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".git",
+		"coverage",
+		"tmp",
+		"log"
+	],
+	"font_face": "menlo, monospace",
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"indent_guide_options":
+	[
+		"draw_active"
+	],
+	"origami_auto_close_empty_panes": false,
+	"rulers":
+	[
+		80
+	],
+	"save_on_focus_lost": true,
+	"tab_size": 2,
+	"theme": "SoDaReloaded Light.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}

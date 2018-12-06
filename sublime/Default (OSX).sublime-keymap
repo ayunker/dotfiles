@@ -1,0 +1,5 @@
+[
+  { "keys": ["ctrl+command+r"], "command": "reveal_in_side_bar" },
+  { "keys": ["command+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
+  { "keys": ["ctrl+w"], "command": "expand_selection", "args": {"to": "word"} }
+]
