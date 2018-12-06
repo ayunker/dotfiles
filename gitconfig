@@ -1,0 +1,18 @@
+[user]
+  name = Tony Yunker
+  email = tony.yunker@gmail.com
+
+[color]
+  ui = auto
+  interactive = true
+  status = true
+  branch = true
+  diff = true
+
+[alias]
+  st = status -sb
+  co = checkout
+  aa = add --all
+  dc = diff --cached
+  b = branch
+  ci = commit -m
