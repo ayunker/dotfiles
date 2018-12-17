@@ -4,9 +4,12 @@ alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias cls='clear'
 alias reshell='source ~/.bashrc'
+alias dots='cd ~/src/dotfiles'
 
 # Git aliases
-source ~/.git_aliases.sh
+if [ -f ~/.git_aliases ]; then
+  source ~/.git_aliases
+fi
 
 # RSpec aliases
 alias rsm='rspec spec/models'
@@ -23,8 +26,8 @@ alias mpa='cd ~/src/mp_admin'
 alias mpd='cd ~/src/mp_dotcom'
 
 # secrets
-if [ -f ~/.secrets.sh ]; then
-  source ~/.secrets.sh
+if [ -f ~/.secrets ]; then
+  source ~/.secrets
 fi
 
 export CLICOLOR=1
