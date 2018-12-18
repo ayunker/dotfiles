@@ -6,6 +6,8 @@ alias cls='clear'
 alias reshell='source ~/.bashrc'
 alias dots='cd ~/src/dotfiles'
 
+alias sublimesettings='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User'
+
 # Git aliases
 if [ -f ~/.git_aliases ]; then
   source ~/.git_aliases
