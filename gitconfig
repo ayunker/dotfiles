@@ -16,3 +16,8 @@
   dc = diff --cached
   b = branch
   ci = commit -m
+  rc = rebase --continue
+  rs = rebase --skip
+  unstage = reset
+  uncommit = reset --soft HEAD^
+  mup = "!git checkout master && git pull && git checkout -"
