@@ -3,6 +3,7 @@
 alias bashrc='vim ~/.bashrc'
 alias cls='clear'
 alias reshell='source ~/.bashrc'
+alias dots='cd ~/src/dotfiles'
 
 # git
 alias gs='git status'
@@ -24,8 +25,8 @@ alias rsj='rspec spec/jobs'
 alias rsu='rspec --tag ~type:feature' 
 
 # MP aliases
-alias mpa='cd ~/code/machineryPete/mp_admin'
-alias mpd='cd ~/code/machineryPete/mp_dotcom'
+alias mpa='cd ~/src/mp_admin'
+alias mpd='cd ~/src/mp_dotcom'
 
 # FUN
 alias 'wttr'='curl -4 http://wttr.in/Chicago'
