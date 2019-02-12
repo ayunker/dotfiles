@@ -4,8 +4,8 @@ if [ -f ~/.aliases.sh ]; then
 fi 
 
 # secrets
-if [ -f ~/.secrets.sh ]; then
-  source ~/.secrets.sh
+if [ -f ~/.secrets ]; then
+  source ~/.secrets
 fi
 
 export CLICOLOR=1

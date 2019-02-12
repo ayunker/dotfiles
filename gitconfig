@@ -9,6 +9,9 @@
   branch = true
   diff = true
 
+[core]
+  editor = vim
+
 [alias]
   st = status -sb
   co = checkout
@@ -21,3 +24,5 @@
   unstage = reset
   uncommit = reset --soft HEAD^
   mup = "!git checkout master && git pull && git checkout -"
+
+  changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status -25
