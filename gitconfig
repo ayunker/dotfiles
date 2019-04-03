@@ -16,6 +16,7 @@
   st = status -sb
   co = checkout
   aa = add --all
+  ap = add -p
   dc = diff --cached
   b = branch
   ci = commit -m
