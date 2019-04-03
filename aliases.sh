@@ -5,6 +5,7 @@ alias cls='clear'
 alias reshell='source ~/.bashrc'
 alias dots='cd ~/src/dotfiles'
 alias vdots='vim ~/src/dotfiles'
+alias ll="ls -al"
 
 # git
 alias gs='git status'
@@ -31,6 +32,9 @@ alias rsfp="rake parallel:spec['spec/features']"
 alias mpa='cd ~/src/mp_admin'
 alias mpd='cd ~/src/mp_dotcom'
 alias mpl='cd ~/src/mp_lambdas'
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
 
 # FUN
 alias 'wttr'='curl -4 http://wttr.in/Chicago'
