@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -39,3 +40,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+set laststatus=2
+set noshowmode
+
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ }
