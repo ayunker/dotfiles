@@ -4,6 +4,7 @@ alias bashrc='vim ~/.bashrc'
 alias cls='clear'
 alias reshell='source ~/.bashrc'
 alias dots='cd ~/src/dotfiles'
+alias vdots='vim ~/src/dotfiles'
 
 # git
 alias gs='git status'
@@ -22,11 +23,14 @@ alias rsf='rspec spec/features'
 alias rsl='rspec spec/lib'
 alias rsh='rspec spec/helpers'
 alias rsj='rspec spec/jobs'
-alias rsu='rspec --tag ~type:feature' 
+alias rsu='rspec --tag ~type:feature'
+alias rsup="rake parallel:spec['spec\/(?!features)']"
+alias rsfp="rake parallel:spec['spec/features']"
 
 # MP aliases
 alias mpa='cd ~/src/mp_admin'
 alias mpd='cd ~/src/mp_dotcom'
+alias mpl='cd ~/src/mp_lambdas'
 
 # FUN
 alias 'wttr'='curl -4 http://wttr.in/Chicago'
