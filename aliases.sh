@@ -5,6 +5,7 @@ alias cls='clear'
 alias reshell='source ~/.bashrc'
 alias dots='cd ~/src/dotfiles'
 alias vdots='vim ~/src/dotfiles'
+alias sublime_packages='cd "/Users/tonyyunker/Library/Application Support/Sublime Text 3/Packages"'
 alias ll="ls -al"
 
 # git
