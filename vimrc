@@ -20,8 +20,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*
 " ctrlp
-let g:ctrlp_mpa = '<c-p>'
+let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " handle line breaked text
