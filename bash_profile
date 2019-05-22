@@ -11,7 +11,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-PS1="\[\033[32m\][\u @ \w]\[\033[0m\]\$(parse_git_branch)\n λ ~ \[\033[0m\]"
+PS1="\[\033[34m\][\t]\[\033[32m\][\u @ \w]\[\033[0m\]\$(parse_git_branch)\n λ ~ \[\033[0m\]"
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
