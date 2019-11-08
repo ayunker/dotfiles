@@ -24,3 +24,8 @@ fbr() {
   branch=$(echo "$branches" | fzf +m) &&
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
+
+show_me_the_gem() {
+  local gem_path=$(bundle show $1)
+  subl $gem_path
+}

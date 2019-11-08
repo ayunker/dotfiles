@@ -11,10 +11,12 @@
 
 [core]
   editor = vim
+	excludesfile = ~/.gitignore_global
 
 [alias]
   st = status -sb
   co = checkout
+  cob = checkout -b
   aa = add --all
   ap = add -p
   dc = diff --cached

@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -45,6 +46,13 @@ nnoremap <C-l> <C-w>l
 set laststatus=2
 set noshowmode
 
+" highlight 80 and 120 column
+let &colorcolumn="80,120"
+
 let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ }
+
+
+
+" let mapleader="\<space>"

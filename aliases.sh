@@ -1,12 +1,17 @@
 #general
- alias vimrc='vim ~/.vimrc'
+alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
+alias vsecrets='vim ~/.secrets'
+alias valias='vim ~/.aliases.sh'
 alias cls='clear'
 alias reshell='source ~/.bashrc'
 alias dots='cd ~/src/dotfiles'
 alias vdots='vim ~/src/dotfiles'
 alias sublime_packages='cd "/Users/tonyyunker/Library/Application Support/Sublime Text 3/Packages"'
 alias ll="ls -al"
+alias show_me_the_path="echo \"${PATH//:/$'\n'}\""
+
+alias zr='zeus rspec'
 
 # git
 alias gs='git status'
@@ -44,3 +49,7 @@ alias 'moon'='curl -4 http://wttr.in/moon'
 
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
+
+# HUB
+alias hpr='hub browse -- pulls'
+alias prs='hub pr list -f "%pC%>(8)%i%Creset %t | %au | Assignees: %as %n"'
