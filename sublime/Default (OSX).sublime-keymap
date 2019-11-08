@@ -1,5 +1,27 @@
 [
   { "keys": ["ctrl+command+r"], "command": "reveal_in_side_bar" },
   { "keys": ["command+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
-  { "keys": ["ctrl+w"], "command": "expand_selection", "args": {"to": "word"} }
+  { "keys": ["ctrl+w"], "command": "expand_selection", "args": {"to": "word"} },
+  { "keys": ["command+0"], "command": "reset_font_size_to_user_defaults" },
+
+  // origami bindings
+  { "keys": ["command+k", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },
+  { "keys": ["command+k", "j"], "command": "travel_to_pane", "args": {"direction": "down"} },
+  { "keys": ["command+k", "k"], "command": "travel_to_pane", "args": {"direction": "up"} },
+  { "keys": ["command+k", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
+
+  { "keys": ["command+shift+k", "h"], "command": "carry_file_to_pane", "args": {"direction": "left"} },
+  { "keys": ["command+shift+k", "j"], "command": "carry_file_to_pane", "args": {"direction": "down"} },
+  { "keys": ["command+shift+k", "k"], "command": "carry_file_to_pane", "args": {"direction": "up"} },
+  { "keys": ["command+shift+k", "l"], "command": "carry_file_to_pane", "args": {"direction": "right"} },
+
+  // git savvy keybindings
+  { "keys": ["command+k", "s"], "command": "gs_show_status"},
+  { "keys": ["command+g", "s"], "command": "gs_show_status"},
+
+  { "keys": ["command+g", "b"], "command": "git_blame"},
+
+  // code folding?
+  { "keys": ["command+k", "["], "command": "fold" },
+  { "keys": ["command+k", "]"], "command": "unfold" }
 ]

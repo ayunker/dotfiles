@@ -5,15 +5,19 @@
 	],
 	"installed_packages":
 	[
+		"Babel",
 		"Git",
 		"GitGutter",
+		"GitSavvy",
 		"Haml",
 		"Origami",
 		"Package Control",
+		"PackageResourceViewer",
 		"Pretty JSON",
 		"Sass",
 		"SideBarEnhancements",
 		"Solarized Color Scheme",
+		"TestRSpec",
 		"Theme - SoDaReloaded"
 	]
 }

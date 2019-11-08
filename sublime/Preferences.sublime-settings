@@ -1,5 +1,6 @@
 {
-	"color_scheme": "Packages/Solarized Color Scheme/Solarized (light).sublime-color-scheme",
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).sublime-color-scheme",
+	"default_font_size": 13,
 	"ensure_newline_at_eof_on_save": true,
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -7,10 +8,13 @@
 		".git",
 		"coverage",
 		"tmp",
-		"log"
+		"log",
+		".aws-sam",
+		"public/assets"
 	],
 	"font_face": "menlo, monospace",
-	"font_size": 12,
+	"font_size": 11,
+	"gpu_window_buffer": false,
 	"ignored_packages":
 	[
 		"Vintage"
@@ -19,12 +23,16 @@
 	[
 		"draw_active"
 	],
+	"mini_diff": false,
 	"origami_auto_close_empty_panes": false,
 	"rulers":
 	[
-		80
+		80,
+		120
 	],
 	"save_on_focus_lost": true,
+	"show_errors_inline": false,
+	"show_git_status": false,
 	"tab_size": 2,
 	"theme": "SoDaReloaded Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
