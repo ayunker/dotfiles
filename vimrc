@@ -4,6 +4,7 @@ filetype plugin indent on
 set number
 set backspace=2
 
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
@@ -14,12 +15,19 @@ Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 set background=dark
-colorscheme solarized
+" colorscheme solarized
+colorscheme nord
 
 " tabbing
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
+" Searching
+set hlsearch    " highlight matches
+set incsearch   " incremental searching
+set ignorecase  " searches are case insensitive
+set smartcase   " ... unless they contain at least one captial letter
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*
 " ctrlp
