@@ -22,10 +22,14 @@
   dc = diff --cached
   b = branch
   ci = commit
-  rc = rebase --continue
+  rbc = rebase --continue
   rs = rebase --skip
   unstage = reset
   uncommit = reset --soft HEAD^
   mup = "!git checkout master && git pull && git checkout -"
 
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status -25
+
+#  ch = log --pretty=format:\"%C(yellow)%h %Cblue%>(12)%ad %Cgreen%<(20)%aN%Cred%d %Creset%s\" --date=short
+  ch = log --pretty=format:\"%C(yellow)%h %Cblue%>(12,trunc)%ad %Cgreen%<(15,trunc)%aN%Cred%d %Creset%s\" --date=relative
+
