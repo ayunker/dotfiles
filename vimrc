@@ -15,8 +15,8 @@ Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 set background=dark
-" colorscheme solarized
-colorscheme nord
+colorscheme solarized
+" colorscheme nord
 
 " tabbing
 set tabstop=2
