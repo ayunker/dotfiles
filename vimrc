@@ -61,6 +61,9 @@ let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ }
 
-
+" yank to clipboard
+if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+endif
 
 " let mapleader="\<space>"
