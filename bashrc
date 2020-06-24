@@ -1,7 +1,7 @@
 # Aliases
 if [ -f ~/.aliases.sh ]; then
   source ~/.aliases.sh
-fi 
+fi
 
 # secrets
 if [ -f ~/.secrets ]; then
@@ -29,3 +29,11 @@ show_me_the_gem() {
   local gem_path=$(bundle show $1)
   subl $gem_path
 }
+
+# rspec() {
+#   if [ -S .zeus.sock ]; then
+#     zeus rspec "$@"
+#   else
+#     command rspec "$@"
+#   fi
+# }

@@ -1,6 +1,7 @@
 export PATH=$PATH:~/bin
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
+export SAM_CLI_TELEMETRY=0
 
 if [ -f ~/.bashrc ]; then
 	source ~/.bashrc
