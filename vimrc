@@ -17,6 +17,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -25,9 +26,11 @@ Plug 'thoughtbot/vim-rspec'
 
 call plug#end()
 
-set background=dark
 colorscheme solarized
+set background=dark
 " colorscheme nord
+" needed for vim-gitgutter to display correctly in Solarized
+highlight clear SignColumn
 
 " tabbing
 set tabstop=2
