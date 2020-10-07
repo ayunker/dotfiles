@@ -2,7 +2,9 @@ set nocompatible
 syntax on
 filetype plugin indent on
 set number
+set relativenumber
 set backspace=2
+set cursorline
 
 " autoload file changes
 set autoread
@@ -16,12 +18,15 @@ Plug 'junegunn/fzf'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 
+Plug 'tpope/vim-surround'
+
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
 
 call plug#end()
@@ -66,8 +71,13 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" yank to the end of the line
+nnoremap Y y$
+
 set laststatus=2
 set noshowmode
+
+set scrolloff=5
 
 " highlight 80 and 120 column
 let &colorcolumn="80,120"
@@ -92,6 +102,8 @@ endif
 
 " testing strip whitespace on save
 autocmd BufWritePre *.rb :%s/\s\+$//e
+autocmd BufWritePre *.js :%s/\s\+$//e
+autocmd BufWritePre *.py :%s/\s\+$//e
 
 " test out setting mardown hard wrap to 80 chars
 " au BufRead,BufNewFile *.md setlocal textwidth=80
@@ -100,5 +112,8 @@ autocmd BufWritePre *.rb :%s/\s\+$//e
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
+
+" Insert a hash rocket with <c-l>
+imap <c-l> <space>=><space>
 
 let g:rspec_command = "!zeus rspec {spec}"
