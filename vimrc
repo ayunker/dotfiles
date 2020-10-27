@@ -15,6 +15,7 @@ Plug 'altercation/vim-colors-solarized'
 " Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf'
+Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 
