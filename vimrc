@@ -83,19 +83,6 @@ set scrolloff=5
 " highlight 80 and 120 column
 let &colorcolumn="80,120"
 
-" let g:lightline = {
-"       \ 'colorscheme': 'solarized',
-"       \ 'active': {
-"       \   'left': [ [ 'mode', 'paste' ],
-"       \             [ 'gitbranch', 'filename', 'modified' ] ]
-"       \ },
-"       \ 'component_function': {
-"       \   'gitbranch': 'FugitiveHead'
-"       \ }
-"       \ }
-
-let g:airline_theme='solarized'
-
 " yank to clipboard
 if has("clipboard")
   set clipboard=unnamed " copy to the system clipboard
