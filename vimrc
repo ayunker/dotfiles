@@ -32,11 +32,14 @@ Plug 'thoughtbot/vim-rspec'
 
 call plug#end()
 
-colorscheme solarized
-set background=dark
-" colorscheme nord
-" needed for vim-gitgutter to display correctly in Solarized
-highlight clear SignColumn
+if $ITERM_PROFILE == 'SolarizedDark'
+  colorscheme solarized
+  set background=dark
+  " needed for vim-gitgutter to display correctly in Solarized
+  highlight clear SignColumn
+else
+  colorscheme nord
+endif
 
 " tabbing
 set tabstop=2
@@ -105,3 +108,5 @@ map <Leader>l :call RunLastSpec()<CR>
 imap <c-l> <space>=><space>
 
 let g:rspec_command = "!zeus rspec {spec}"
+
+imap jj <Esc>
