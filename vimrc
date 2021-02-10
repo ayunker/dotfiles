@@ -15,6 +15,7 @@ Plug 'altercation/vim-colors-solarized'
 " Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
@@ -29,6 +30,10 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
+
+Plug 'neovimhaskell/haskell-vim'
+
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -52,11 +57,18 @@ set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive
 set smartcase   " ... unless they contain at least one captial letter
 
+" testing - turn off annoying bell when <ESC> in normal mode
+set visualbell
+set noerrorbells
+
 let mapleader="\<space>"
 
 " FZF
 nnoremap <c-p> :FZF<cr>
-nnoremap <leader>p :FZF<cr>
+nnoremap <leader>p :GFiles<cr>
+
+let g:fzf_preview_window = []
+let g:fzf_layout = { 'down': '40%' }
 
 " handle line breaked text
 nnoremap j gj
@@ -81,7 +93,7 @@ nnoremap Y y$
 set laststatus=2
 set noshowmode
 
-set scrolloff=5
+set scrolloff=1
 
 " highlight 80 and 120 column
 let &colorcolumn="80,120"
@@ -108,5 +120,3 @@ map <Leader>l :call RunLastSpec()<CR>
 imap <c-l> <space>=><space>
 
 let g:rspec_command = "!zeus rspec {spec}"
-
-imap jj <Esc>
