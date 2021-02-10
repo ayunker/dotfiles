@@ -21,7 +21,7 @@
   ap = add -p
   dc = diff --cached
   b = branch
-  ci = commit
+  ci = commit --verbose
   rbc = rebase --continue
   rs = rebase --skip
   unstage = reset
