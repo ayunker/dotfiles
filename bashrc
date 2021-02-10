@@ -20,7 +20,7 @@ export RIPGREP_CONFIG_PATH=/Users/tonyyunker/.ripgreprc
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-fbr() {
+gb() {
   local branches branch
   branches=$(git --no-pager branch) &&
   branch=$(echo "$branches" | fzf +m) &&
