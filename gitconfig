@@ -13,6 +13,9 @@
   editor = vim
 	excludesfile = ~/.gitignore_global
 
+[pull]
+  rebase = false
+
 [alias]
   st = status -sb
   co = checkout
@@ -27,6 +30,7 @@
   unstage = reset
   uncommit = reset --soft HEAD^
   mup = "!git checkout master && git pull && git checkout -"
+  ps = "!git push origin staging && git push staging staging:master"
 
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status -25
 
