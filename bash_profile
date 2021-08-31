@@ -14,8 +14,26 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-PS1="\[\033[34m\][\t]\[\033[32m\][\u @ \w]\[\033[0m\]\$(parse_git_branch)\n λ ~ \[\033[0m\]"
+PS1="\[\e[32m\]\w\[\[\e[m\]\$(parse_git_branch) % "
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export PATH="/Users/tonyyunker/.pyenv/shims:${PATH}"
+export PYENV_SHELL=bash
+command pyenv rehash 2>/dev/null
+pyenv() {
+  local command
+  command="${1:-}"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval "$(pyenv "sh-$command" "$@")";;
+  *)
+    command pyenv "$command" "$@";;
+  esac
+}

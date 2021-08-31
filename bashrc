@@ -10,7 +10,7 @@ fi
 
 export CLICOLOR=1
 
-export PG_DUMP="/Applications/Postgres.app/Contents/Versions/9.5/bin/"
+export PG_DUMP="/Applications/Postgres.app/Contents/Versions/13/bin/"
 PATH=$PG_DUMP:$PATH
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -39,3 +39,4 @@ show_me_the_gem() {
 #     command rspec "$@"
 #   fi
 # }
+[ -f "/Users/tonyyunker/.ghcup/env" ] && source "/Users/tonyyunker/.ghcup/env" # ghcup-env
