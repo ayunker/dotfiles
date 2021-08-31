@@ -19,6 +19,7 @@ alias gs='git status'
 # alias gl='git log --oneline -10'
 # alias gll='git log --oneline -50'
 alias gl='git ch -25'
+alias gll='git ch -50'
 
 # rails
 alias rs='rails server'
@@ -54,3 +55,6 @@ alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew d
 # HUB
 alias hpr='hub browse -- pulls'
 alias prs='hub pr list -f "%pC%>(8)%i%Creset %t | %au | Assignees: %as %n"'
+
+# DOCKER
+alias dockes='docker container start -ai elastic-7.2'
