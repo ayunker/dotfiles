@@ -33,8 +33,6 @@ Plug 'thoughtbot/vim-rspec'
 
 Plug 'neovimhaskell/haskell-vim'
 
-Plug 'vimwiki/vimwiki'
-
 call plug#end()
 
 if $ITERM_PROFILE == 'SolarizedDark'
@@ -60,6 +58,7 @@ set smartcase   " ... unless they contain at least one captial letter
 " testing - turn off annoying bell when <ESC> in normal mode
 set visualbell
 set noerrorbells
+set belloff=all
 
 let mapleader="\<space>"
 
@@ -89,6 +88,10 @@ nnoremap <C-l> <C-w>l
 
 " yank to the end of the line
 nnoremap Y y$
+
+" airline
+let g:airline#extensions#hunks#enabled=0
+let g:airline#extensions#scrollbar#enabled=0
 
 set laststatus=2
 set noshowmode
@@ -120,3 +123,5 @@ map <Leader>l :call RunLastSpec()<CR>
 imap <c-l> <space>=><space>
 
 let g:rspec_command = "!zeus rspec {spec}"
+
+map <Leader>j :%!jq <CR>
