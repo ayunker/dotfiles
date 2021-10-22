@@ -8,6 +8,9 @@ if [ -f ~/.secrets ]; then
   source ~/.secrets
 fi
 
+#REMOVE THIS AFTER RAILS 6 UPGRADE
+export RUBYOPT='-W:no-deprecated -W:no-experimental'
+
 export CLICOLOR=1
 
 export PG_DUMP="/Applications/Postgres.app/Contents/Versions/13/bin/"
