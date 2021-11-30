@@ -40,12 +40,13 @@ alias rsfp="rake parallel:spec['spec/features']"
 alias mpa='cd ~/src/mp_admin'
 alias mpd='cd ~/src/mp_dotcom'
 alias mpl='cd ~/src/mp_lambdas'
+alias mpg='cd ~/src/private_gems'
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # FUN
-alias 'wttr'='curl -4 http://wttr.in/Chicago'
+alias 'wttr'='curl -4 http://wttr.in/Barrington'
 alias 'wttrwork'='curl -4 https://wttr.in/~300%20S%20Riverside%20Plaza%20chicago'
 alias 'moon'='curl -4 http://wttr.in/moon'
 
