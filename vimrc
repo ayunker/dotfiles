@@ -67,7 +67,7 @@ nnoremap <c-p> :FZF<cr>
 nnoremap <leader>p :GFiles<cr>
 
 let g:fzf_preview_window = []
-let g:fzf_layout = { 'down': '40%' }
+let g:fzf_layout = { 'down': '30%' }
 
 " handle line breaked text
 nnoremap j gj
@@ -88,6 +88,11 @@ nnoremap <C-l> <C-w>l
 
 " yank to the end of the line
 nnoremap Y y$
+
+" Maintain the cursor position when yanking a visual selection
+" http://ddrscott.github.io/blog/2016/yank-without-jank/
+vnoremap y myy`y
+vnoremap Y myY`y
 
 " airline
 let g:airline#extensions#hunks#enabled=0
