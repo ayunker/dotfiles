@@ -32,7 +32,7 @@
   uncommit = reset --soft HEAD^
   mup = "!git checkout master && git pull && git checkout -"
   ps = "!git push origin staging && git push staging staging:master"
-  todo = "!git --no-pager diff -U0 master | rg TODO | sed 's/^+//' | git --no-pager grep -nFf - 2> /dev/null"
+  todo = "!git --no-pager diff -U0 master | rg 'TODO|debugger' | sed 's/^+//' | git --no-pager grep -nFf - 2> /dev/null"
 
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status -25
 
