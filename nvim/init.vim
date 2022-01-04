@@ -6,6 +6,8 @@ set relativenumber
 set backspace=2
 set cursorline
 
+set guicursor=
+
 " autoload file changes
 set autoread
 
