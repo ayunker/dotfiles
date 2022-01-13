@@ -30,6 +30,7 @@
   rs = rebase --skip
   unstage = reset
   uncommit = reset --soft HEAD^
+  rbi = "!git rebase -i `git merge-base master HEAD`"
   mup = "!git checkout master && git pull && git checkout -"
   ps = "!git push origin staging && git push staging staging:master"
   todo = "!git --no-pager diff -U0 master | rg 'TODO|debugger' | sed 's/^+//' | git --no-pager grep -nFf - 2> /dev/null"
