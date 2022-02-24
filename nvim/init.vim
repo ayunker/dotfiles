@@ -79,6 +79,7 @@ let mapleader="\<space>"
 " FZF
 nnoremap <c-p> :FZF<cr>
 nnoremap <leader>p :GFiles<cr>
+nnoremap <leader>b :Buffers<cr>
 
 let g:fzf_preview_window = []
 let g:fzf_layout = { 'down': '30%' }
