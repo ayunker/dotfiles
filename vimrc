@@ -131,3 +131,6 @@ imap <c-l> <space>=><space>
 let g:rspec_command = "!zeus rspec {spec}"
 
 map <Leader>j :%!jq <CR>
+
+" Rg search for work under cursor
+nnoremap <leader>r :Rg<cr>
