@@ -14,8 +14,14 @@
 	excludesfile = ~/.gitignore_global
   pager = "diff-so-fancy | less --tabs=4 -RFX"
 
+[rebase]
+	autoStash = true
+
 [pull]
   rebase = false
+
+[init]
+	defaultBranch = main
 
 [alias]
   st = status -sb
