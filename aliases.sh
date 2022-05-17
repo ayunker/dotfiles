@@ -46,7 +46,7 @@ alias mpg='cd ~/src/private_gems'
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # FUN
-alias 'wttr'='curl -4 http://wttr.in/Barrington'
+alias 'wttr'='curl -4 http://wttr.in/Streeterville'
 alias 'wttrwork'='curl -4 https://wttr.in/~300%20S%20Riverside%20Plaza%20chicago'
 alias 'moon'='curl -4 http://wttr.in/moon'
 
