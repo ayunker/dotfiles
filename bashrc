@@ -9,7 +9,9 @@ if [ -f ~/.secrets ]; then
 fi
 
 #REMOVE THIS AFTER RAILS 6 UPGRADE
-export RUBYOPT='-W:no-deprecated -W:no-experimental'
+# export RUBYOPT='-W:no-deprecated -W:no-experimental'
+
+export EDITOR=vim
 
 export CLICOLOR=1
 
@@ -31,8 +33,7 @@ gb() {
 }
 
 show_me_the_gem() {
-  local gem_path=$(bundle show $1)
-  subl $gem_path
+  bundle open $1
 }
 
 # rspec() {

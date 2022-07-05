@@ -1,11 +1,15 @@
 #general
+alias v='vim'
+alias vi='vim'
 alias vimrc='vim ~/.vimrc'
+alias viminit='vim ~/.config/nvim/init.vim'
 alias bashrc='vim ~/.bashrc'
 alias vsecrets='vim ~/.secrets'
 alias valias='vim ~/.aliases.sh'
 alias cls='clear'
 alias reshell='source ~/.bashrc'
 alias dots='cd ~/src/dotfiles'
+alias tils='cd ~/src/ayunker/til'
 alias vdots='vim ~/src/dotfiles'
 alias sublime_packages='cd "/Users/tonyyunker/Library/Application Support/Sublime Text 3/Packages"'
 alias ll="ls -al"
