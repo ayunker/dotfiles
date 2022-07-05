@@ -1,0 +1,101 @@
+live_config_reload: true
+
+font:
+  size: 14.0
+
+  use_thin_strokes: true
+
+  normal:
+    family: Iosevka Light
+
+selection:
+  save_to_clipboard: true
+
+window:
+  padding:
+    x: 5
+    y: 2
+  decorations: buttonless
+
+schemes:
+  solarized_dark: &dark
+    # Default colors
+    primary:
+      background: '0x002b36'
+      foreground: '0x839496'
+
+    # Normal colors
+    normal:
+      black:   '0x073642'
+      red:     '0xdc322f'
+      green:   '0x859900'
+      yellow:  '0xb58900'
+      blue:    '0x268bd2'
+      magenta: '0xd33682'
+      cyan:    '0x2aa198'
+      white:   '0xeee8d5'
+
+    # Bright colors
+    bright:
+      black:   '0x002b36'
+      red:     '0xcb4b16'
+      green:   '0x586e75'
+      yellow:  '0x657b83'
+      blue:    '0x839496'
+      magenta: '0x6c71c4'
+      cyan:    '0x93a1a1'
+      white:   '0xfdf6e3'
+  solarized_light: &light
+    # Default colors
+    primary:
+      background: '0xfdf6e3'
+      foreground: '0x586e75'
+
+    # Normal colors
+    normal:
+      black:   '0x073642'
+      red:     '0xdc322f'
+      green:   '0x859900'
+      yellow:  '0xb58900'
+      blue:    '0x268bd2'
+      magenta: '0xd33682'
+      cyan:    '0x2aa198'
+      white:   '0xeee8d5'
+
+    # Bright colors
+    bright:
+      black:   '0x002b36'
+      red:     '0xcb4b16'
+      green:   '0x586e75'
+      yellow:  '0x657b83'
+      blue:    '0x839496'
+      magenta: '0x6c71c4'
+      cyan:    '0x93a1a1'
+      white:   '0xfdf6e3'
+
+colors: *dark
+
+key_bindings:
+  ## TMUX SPECIFIC THINGSS...see https://www.joshmedeski.com/posts/macos-keyboard-shortcuts-for-tmux
+  # Create a new tmux window
+  - { key: T, mods: Command, chars: "\x02\x63" }
+  # Create a new vertical Split
+  - { key: D, mods: Command, chars: "\x02\x25" }
+  # Create a new horizontal split
+  - { key: D, mods: Command|Shift, chars: "\x02\x22" }
+  # Cycle to the next pane
+  - { key: RBracket, mods: Command, chars: "\x02\x6f" }
+    # Cycle to the previous pane (only the immediate previous)
+  - { key: LBracket, mods: Command, chars: "\x02\x3b" }
+  # Rename the current tmux window
+  - { key: Comma, mods: Command, chars: "\x02\x2c" }
+  # Select window 1-9
+  - { key: Key1, mods: Command, chars: "\x02\x31" }
+  - { key: Key2, mods: Command, chars: "\x02\x32" }
+  - { key: Key3, mods: Command, chars: "\x02\x33" }
+  - { key: Key4, mods: Command, chars: "\x02\x34" }
+  - { key: Key5, mods: Command, chars: "\x02\x35" }
+  - { key: Key6, mods: Command, chars: "\x02\x36" }
+  - { key: Key7, mods: Command, chars: "\x02\x37" }
+  - { key: Key8, mods: Command, chars: "\x02\x38" }
+  - { key: Key9, mods: Command, chars: "\x02\x39" }
