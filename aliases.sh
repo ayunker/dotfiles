@@ -62,4 +62,4 @@ alias hpr='hub browse -- pulls'
 alias prs='hub pr list -f "%pC%>(8)%i%Creset %t | %au | Assignees: %as %n"'
 
 # DOCKER
-alias dockes='docker container start -ai elastic-7.2'
+alias dockes='docker container start -ai elasticsearch721'

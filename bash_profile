@@ -40,3 +40,4 @@ pyenv() {
     command pyenv "$command" "$@";;
   esac
 }
+export PATH="/opt/homebrew/bin:$PATH"
