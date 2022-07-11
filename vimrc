@@ -98,6 +98,7 @@ vnoremap Y myY`y
 " airline
 let g:airline#extensions#hunks#enabled=0
 let g:airline#extensions#scrollbar#enabled=0
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]' " don't show the fileformat if it matches this
 
 set laststatus=2
 set noshowmode
