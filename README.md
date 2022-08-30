@@ -1,8 +1,22 @@
 # dotfiles
 
 1. run the install script
-2. Install Package Control for Sublime
-3. Copy sublime settings over
+2. install homebrew formulae from .formulae
+3. install homebrew casks from .casks
 
-## Sublime Text
-Settings on mac: `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/`
+
+## Other software to Install
+
+* [Homebrew](https://brew.sh)
+* [PostgresApp](https://postgresapp.com)
+* [Postico](https://eggerapps.at/postico/)
+* [rvm](https://rvm.io)
+
+## Homebrew
+
+To generate list of installed formulae and casks:
+
+```
+brew leaves >! formulae
+brew list --casks >! casks
+```
