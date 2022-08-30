@@ -17,7 +17,8 @@ parse_git_branch() {
 # PS1="\[\e[32m\]\w\[\[\e[m\]\$(parse_git_branch) % "
 
 # I think this is a simplified version of above. and doesn't break in tmux
-PS1="\e[0;32m\w\e[0m\$(parse_git_branch) % "
+# PS1="\e[0;32m\w\e[0m\$(parse_git_branch) % "
+PS1="\[\e[32m\]\w\[\e[m\]\$(parse_git_branch) % "
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
