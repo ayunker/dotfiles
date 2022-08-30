@@ -129,7 +129,7 @@ map <Leader>l :call RunLastSpec()<CR>
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
 
-let g:rspec_command = "!bin/rspec {spec}"
+let g:rspec_command = "!rspec {spec}"
 
 map <Leader>j :%!jq <CR>
 
