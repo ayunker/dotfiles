@@ -89,6 +89,10 @@ key_bindings:
   - { key: LBracket, mods: Command, chars: "\x02\x3b" }
   # Rename the current tmux window
   - { key: Comma, mods: Command, chars: "\x02\x2c" }
+  # Zoom the current pane
+  - { key: Z, mods: Command, chars: "\x02\x7a" }
+  # Select a new tmux session for the attached client interactively
+  - { key: P, mods: Command, chars: "\x02\x73" }
   # Select window 1-9
   - { key: Key1, mods: Command, chars: "\x02\x31" }
   - { key: Key2, mods: Command, chars: "\x02\x32" }
