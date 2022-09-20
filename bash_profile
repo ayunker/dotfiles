@@ -24,7 +24,7 @@ PS1="\[\e[32m\]\w\[\e[m\]\$(parse_git_branch) % "
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-export PATH="/Users/tonyyunker/.pyenv/shims:${PATH}"
+export PATH="$HOME/.pyenv/shims:${PATH}"
 export PYENV_SHELL=bash
 command pyenv rehash 2>/dev/null
 pyenv() {

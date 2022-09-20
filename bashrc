@@ -21,7 +21,7 @@ PATH=$PG_DUMP:$PATH
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-export RIPGREP_CONFIG_PATH=/Users/tonyyunker/.ripgreprc
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -43,4 +43,4 @@ show_me_the_gem() {
 #     command rspec "$@"
 #   fi
 # }
-[ -f "/Users/tonyyunker/.ghcup/env" ] && source "/Users/tonyyunker/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
