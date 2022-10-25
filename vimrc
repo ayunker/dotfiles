@@ -35,7 +35,7 @@ Plug 'neovimhaskell/haskell-vim'
 
 call plug#end()
 
-if $ITERM_PROFILE == 'SolarizedDark'
+if $CSCHEME == 'solarized'
   colorscheme solarized
   set background=dark
   " needed for vim-gitgutter to display correctly in Solarized
@@ -94,6 +94,11 @@ nnoremap Y y$
 " http://ddrscott.github.io/blog/2016/yank-without-jank/
 vnoremap y myy`y
 vnoremap Y myY`y
+
+" Easier find and replace
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
+map <Leader>rp "hyiw:%s/<C-r>h//gc<left><left><left>
 
 " airline
 let g:airline#extensions#hunks#enabled=0

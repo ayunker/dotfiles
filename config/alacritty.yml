@@ -1,5 +1,8 @@
 live_config_reload: true
 
+env:
+  CSCHEME: solarized
+
 font:
   size: 16.0
 
