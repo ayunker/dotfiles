@@ -1,9 +1,7 @@
 live_config_reload: true
 
 font:
-  size: 14.0
-
-  use_thin_strokes: true
+  size: 16.0
 
   normal:
     family: Iosevka Light
