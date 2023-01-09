@@ -9,7 +9,7 @@ set cursorline
 " autoload file changes
 set autoread
 
-call plug#begin('~/.vim/plugged')
+call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
 " Plug 'itchyny/lightline.vim'
@@ -21,6 +21,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary'
 
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -32,6 +33,9 @@ Plug 'tpope/vim-rails'
 Plug 'thoughtbot/vim-rspec'
 
 Plug 'neovimhaskell/haskell-vim'
+
+" nvim stuffs
+Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 

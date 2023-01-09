@@ -1,6 +1,6 @@
 #general
-alias v='vim'
-alias vi='vim'
+alias v='nvim'
+alias vi='nvim'
 alias vimrc='vim ~/.vimrc'
 alias viminit='vim ~/.config/nvim/init.vim'
 alias bashrc='vim ~/.bashrc'
