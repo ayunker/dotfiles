@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+
+TIL_DIR = "#{Dir.home}/src/ayunker/til"
+options = {}
+
+OptionParser.new do |parser|
+  parser.on('-s', '--subject SUBJECT', 'The subject for the TIL') do |v|
+    options[:subject] = v
+  end
+
+  parser.on('-t', '--title TITLE', 'The title of the TIL') do |v|
+    options[:title] = v
+  end
+end.parse!
+
+til_path = File.join(options[:subject], options[:title].split(' ').join('_')) + '.md'
+
+File.open(File.join(TIL_DIR, 'README.md'), 'a') { |f| f << "* [#{options[:title]}](#{til_path})" }
+File.open(File.join(TIL_DIR, til_path), 'a') { |f| f << "# #{options[:title]}" }
+
+exec("nvim #{File.join(TIL_DIR, til_path)} #{File.join(TIL_DIR, 'README.md')}")

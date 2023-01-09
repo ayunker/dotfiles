@@ -15,3 +15,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 mkdir ~/bin
 ln -sf ~/src/dotfiles/bin/ass ~/bin/ass
+ln -sf ~/src/dotfiles/bin/tiller ~/bin/tiller
