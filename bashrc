@@ -12,6 +12,7 @@ fi
 # export RUBYOPT='-W:no-deprecated -W:no-experimental'
 
 export EDITOR=vim
+export JEKYLL_EDITOR=nvim
 
 export CLICOLOR=1
 
