@@ -12,6 +12,7 @@ set autoread
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
+Plug 'folke/tokyonight.nvim'
 " Plug 'itchyny/lightline.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'junegunn/fzf'
