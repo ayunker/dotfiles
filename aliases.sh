@@ -20,6 +20,7 @@ alias zr='zeus rspec'
 
 # git
 alias gs='git status'
+alias gst='git status'
 
 # alias gl='git log --oneline -10'
 # alias gll='git log --oneline -50'
