@@ -63,5 +63,4 @@ alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew d
 alias hpr='hub browse -- pulls'
 alias prs='hub pr list -f "%pC%>(8)%i%Creset %t | %au | Assignees: %as %n"'
 
-# DOCKER
-alias dockes='docker container start -ai elasticsearch721'
+if [[ -s "$HOME/.aliases.local" ]] ; then source "$HOME/.aliases.local" ; fi
