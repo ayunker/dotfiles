@@ -24,23 +24,25 @@
 	defaultBranch = main
 
 [alias]
-  st = status -sb
-  co = checkout
-  cob = checkout -b
   aa = add --all
   ap = add -p
-  dc = diff --cached
   b = branch
+  cheddar = commit --amend -CHEAD
   ci = commit --verbose
-  rbc = rebase --continue
-  rs = rebase --skip
-  unstage = reset
-  uncommit = reset --soft HEAD^
-  rbi = "!git rebase -i `git merge-base master HEAD`"
+  co = checkout
+  cob = checkout -b
+  dc = diff --cached
   mup = "!git checkout master && git pull && git checkout -"
   ps = "!git push origin staging && git push staging staging:master"
   psf = "!git push staging staging:master --force"
+  put = push origin HEAD
+  rbc = rebase --continue
+  rbi = "!git rebase -i `git merge-base master HEAD`"
+  rs = rebase --skip
+  st = status -sb
   todo = "!git --no-pager diff -U0 master | rg 'TODO|debugger' | sed 's/^+//' | git --no-pager grep -nFf - 2> /dev/null"
+  uncommit = reset --soft HEAD^
+  unstage = reset
 
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status -25
   ch = log --pretty=format:\"%C(yellow)%h %Cblue%>(12,trunc)%ad %Cgreen%<(15,trunc)%aN%Cred%d %Creset%s\" --date=relative
