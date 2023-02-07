@@ -16,9 +16,6 @@ export JEKYLL_EDITOR=nvim
 
 export CLICOLOR=1
 
-export PG_DUMP="/Applications/Postgres.app/Contents/Versions/13/bin/"
-PATH=$PG_DUMP:$PATH
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
