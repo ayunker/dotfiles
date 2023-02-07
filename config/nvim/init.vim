@@ -17,5 +17,6 @@ require('lualine').setup {
   }
 }
 EOF
+au TextYankPost * silent! lua vim.highlight.on_yank()
 
 au BufRead,BufNewFile *.md setlocal textwidth=80

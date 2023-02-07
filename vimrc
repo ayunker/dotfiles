@@ -23,6 +23,7 @@ Plug 'tpope/vim-commentary'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
 
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
