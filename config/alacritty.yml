@@ -106,7 +106,7 @@ schemes:
       - { index: 17, color: '0xdb4b4b' }
 
 
-colors: *storm
+colors: *dark
 
 key_bindings:
   ## TMUX SPECIFIC THINGSS...see https://www.joshmedeski.com/posts/macos-keyboard-shortcuts-for-tmux
