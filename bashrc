@@ -11,7 +11,7 @@ fi
 #REMOVE THIS AFTER RAILS 6 UPGRADE
 # export RUBYOPT='-W:no-deprecated -W:no-experimental'
 
-export EDITOR=vim
+export EDITOR=nvim
 export JEKYLL_EDITOR=nvim
 
 export CLICOLOR=1

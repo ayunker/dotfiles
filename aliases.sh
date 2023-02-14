@@ -13,8 +13,10 @@ alias dots='cd ~/src/dotfiles'
 alias tils='cd ~/src/ayunker/til'
 alias vdots='v ~/src/dotfiles'
 alias sublime_packages='cd "/Users/tonyyunker/Library/Application Support/Sublime Text 3/Packages"'
-alias ll="ls -al"
 alias show_me_the_path="echo \"${PATH//:/$'\n'}\""
+
+# better ls
+[[ -s $(which exa) ]] && alias l='exa -lha' && alias ls=exa
 
 alias zr='zeus rspec'
 
