@@ -25,6 +25,7 @@
 
 [alias]
   aa = add --all
+  aliases=!git config -l | grep '^alias' | cut -c 7- | sort
   ap = add -p
   b = branch
   cheddar = commit --amend -CHEAD
@@ -32,6 +33,7 @@
   co = checkout
   cob = checkout -b
   dc = diff --cached
+  doff = reset HEAD^
   mup = "!git checkout master && git pull && git checkout -"
   ps = "!git push origin staging && git push staging staging:master"
   psf = "!git push staging staging:master --force"
