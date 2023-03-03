@@ -20,6 +20,10 @@
 [pull]
   rebase = false
 
+[push]
+  default = tracking
+  autoSetupRemote = true
+
 [init]
 	defaultBranch = main
 
@@ -35,6 +39,7 @@
   dc = diff --cached
   doff = reset HEAD^
   mup = "!git checkout master && git pull && git checkout -"
+  please = push --force-with-lease
   ps = "!git push origin staging && git push staging staging:master"
   psf = "!git push staging staging:master --force"
   put = push origin HEAD
