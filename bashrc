@@ -16,6 +16,11 @@ export JEKYLL_EDITOR=nvim
 
 export CLICOLOR=1
 
+#PG PATH
+export PG_PATH="/Applications/Postgres.app/Contents/Versions/15/bin/"
+PATH=$PG_PATH:$PATH
+
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
@@ -46,3 +51,5 @@ show_me_the_gem() {
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(~/src/hr/hr/libexec/hr init -)"
