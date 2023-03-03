@@ -36,6 +36,7 @@ Plug 'neovimhaskell/haskell-vim'
 " nvim stuffs
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lualine/lualine.nvim'
+Plug 'folke/trouble.nvim'
 
 call plug#end()
 
@@ -139,3 +140,5 @@ map <Leader>j :%!jq <CR>
 
 " Rg search for work under cursor
 nnoremap <leader>r :Rg<cr>
+
+vmap gs :sort<CR>
