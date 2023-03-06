@@ -8,9 +8,6 @@ if [ -f ~/.secrets ]; then
   source ~/.secrets
 fi
 
-#REMOVE THIS AFTER RAILS 6 UPGRADE
-# export RUBYOPT='-W:no-deprecated -W:no-experimental'
-
 export EDITOR=nvim
 export JEKYLL_EDITOR=nvim
 
@@ -19,10 +16,6 @@ export CLICOLOR=1
 #PG PATH
 export PG_PATH="/Applications/Postgres.app/Contents/Versions/15/bin/"
 PATH=$PG_PATH:$PATH
-
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
