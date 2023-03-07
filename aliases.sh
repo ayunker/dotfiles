@@ -43,12 +43,7 @@ alias rsj='rspec spec/jobs'
 alias rsu='rspec --tag ~type:feature'
 alias rsup="rake parallel:spec['spec\/(?!features)']"
 alias rsfp="rake parallel:spec['spec/features']"
-
-# MP aliases
-alias mpa='cd ~/src/mp_admin'
-alias mpd='cd ~/src/mp_dotcom'
-alias mpl='cd ~/src/mp_lambdas'
-alias mpg='cd ~/src/private_gems'
+alias rsd="git diff --name-only | rg _spec | xargs bin/rspec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
