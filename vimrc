@@ -37,6 +37,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'folke/trouble.nvim'
+Plug 'rebelot/kanagawa.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
