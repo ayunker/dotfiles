@@ -44,16 +44,14 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-neorg/neorg'
 
+Plug 'epwalsh/obsidian.nvim'
+
 call plug#end()
 
-if $CSCHEME == 'solarized'
-  colorscheme solarized
-  set background=dark
-  " needed for vim-gitgutter to display correctly in Solarized
-  highlight clear SignColumn
-else
-  colorscheme nord
-endif
+colorscheme solarized
+set background=dark
+" needed for vim-gitgutter to display correctly in Solarized
+highlight clear SignColumn
 
 " tabbing
 set tabstop=2
