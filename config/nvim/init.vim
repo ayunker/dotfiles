@@ -95,6 +95,22 @@ require('lualine').setup {
 
 -- vim.cmd[[colorscheme tokyonight]]
 
+-- NEORG
+require('neorg').setup {
+    load = {
+        ["core.defaults"] = {}, -- Loads default behaviour
+        ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+        ["core.norg.dirman"] = { -- Manages Neorg workspaces
+            config = {
+                workspaces = {
+                    notes = "~/neorg",
+                },
+            },
+        },
+    },
+}
+-- END NEORG
+
 EOF
 au TextYankPost * silent! lua vim.highlight.on_yank()
 
