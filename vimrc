@@ -2,7 +2,7 @@ set nocompatible
 syntax on
 filetype plugin indent on
 set number
-set relativenumber
+" set relativenumber
 set backspace=2
 set cursorline
 
@@ -29,7 +29,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'tpope/vim-rails'
-Plug 'thoughtbot/vim-rspec'
+Plug 'vim-test/vim-test'
 
 Plug 'neovimhaskell/haskell-vim'
 
@@ -48,8 +48,8 @@ Plug 'epwalsh/obsidian.nvim'
 
 call plug#end()
 
-colorscheme solarized
 set background=dark
+colorscheme solarized
 " needed for vim-gitgutter to display correctly in Solarized
 highlight clear SignColumn
 
@@ -130,15 +130,15 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 " test out setting mardown hard wrap to 80 chars
 " au BufRead,BufNewFile *.md setlocal textwidth=80
 
-" RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
+" vim-test mappings
+nmap <silent> <leader>t :TestFile<CR>
+nmap <silent> <leader>s :TestNearest<CR>
+nmap <silent> <leader>l :TestLast<CR>
+
+let test#strategy = "neovim"
 
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
-
-let g:rspec_command = "!rspec {spec}"
 
 map <Leader>j :%!jq <CR>
 
