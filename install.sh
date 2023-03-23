@@ -7,6 +7,7 @@ ln -sf ~/src/dotfiles/config/alacritty.yml ~/.alacritty.yml
 ln -sf ~/src/dotfiles/ripgreprc ~/.ripgreprc
 ln -sf ~/src/dotfiles/vimrc ~/.vimrc
 ln -sf ~/src/dotfiles/config/nvim/init.vim ~/.config/nvim/init.vim
+ln -sf ~/src/dotfiles/config/bat/config ~/.config/bat/config
 
 # other stuff to do here
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
