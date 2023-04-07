@@ -14,6 +14,7 @@ alias tils='cd ~/src/ayunker/til'
 alias vdots='v ~/src/dotfiles'
 alias sublime_packages='cd "/Users/tonyyunker/Library/Application Support/Sublime Text 3/Packages"'
 alias show_me_the_path="echo \"${PATH//:/$'\n'}\""
+alias tmm="tmuxinator"
 
 # better ls
 [[ -s $(which exa) ]] && alias l='exa -lha' && alias ls=exa
