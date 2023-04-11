@@ -42,9 +42,9 @@ Plug 'rebelot/kanagawa.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-neorg/neorg'
+" Plug 'nvim-neorg/neorg'
 
-Plug 'epwalsh/obsidian.nvim'
+" Plug 'epwalsh/obsidian.nvim'
 
 call plug#end()
 

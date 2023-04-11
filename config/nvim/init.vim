@@ -93,23 +93,32 @@ require('lualine').setup {
 -- }
 -- END TREE-SITTER
 
--- vim.cmd[[colorscheme tokyonight]]
-
 -- NEORG
-require('neorg').setup {
-    load = {
-        ["core.defaults"] = {}, -- Loads default behaviour
-        ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
-        ["core.norg.dirman"] = { -- Manages Neorg workspaces
-            config = {
-                workspaces = {
-                    notes = "~/neorg",
-                },
-            },
-        },
-    },
-}
+-- require('neorg').setup {
+--     load = {
+--         ["core.defaults"] = {}, -- Loads default behaviour
+--         ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+--         ["core.norg.dirman"] = { -- Manages Neorg workspaces
+--             config = {
+--                 workspaces = {
+--                     notes = "~/neorg",
+--                 },
+--             },
+--         },
+--     },
+-- }
 -- END NEORG
+
+-- OBSIDIAN
+-- require("obsidian").setup({
+--   dir = "~/Documents/obsidian",
+--   notes_subdir = "notes",
+--   disable_frontmatter = true,
+--   completion = {
+--     nvim_cmp = false,
+--   }
+-- })
+-- END OBSIDIAN
 
 EOF
 au TextYankPost * silent! lua vim.highlight.on_yank()
