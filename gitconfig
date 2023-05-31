@@ -50,7 +50,7 @@
   todo = "!git --no-pager diff -U0 master | rg 'TODO|debugger' | sed 's/^+//' | git --no-pager grep -nFf - 2> /dev/null"
   uncommit = reset --soft HEAD^
   unstage = reset
-  wip = "!git commit -m 'wip'"
+  wip = "!git add . && git commit -m 'wip'"
 
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status -25
   ch = log --pretty=format:\"%C(yellow)%h %Cblue%>(12,trunc)%ad %Cgreen%<(15,trunc)%aN%Cred%d %Creset%s\" --date=relative
