@@ -11,11 +11,11 @@
 
 [core]
   editor = nvim
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
   pager = "diff-so-fancy | less --tabs=4 -RFX"
 
 [rebase]
-	autoStash = true
+  autoStash = true
 
 [pull]
   rebase = false
@@ -25,7 +25,7 @@
   autoSetupRemote = true
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [alias]
   aa = add --all
