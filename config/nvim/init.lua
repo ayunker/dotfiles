@@ -92,21 +92,21 @@ require('lazy').setup({
     'maxmx03/solarized.nvim',
     priority = 1000,
     config = function()
-      -- local success, solarized = pcall(require, 'solarized')
-      --
-      -- vim.o.background = 'dark'
-      -- solarized:setup {
-      --   config = {
-      --     theme = 'vim',
-      --     transparent = false,
-      --     highlights = function(colors, darken, lighten, blend)
-      --       return {
-      --         NormalNC = { link = 'Normal' }
-      --       }
-      --     end
-      --   }
-      -- }
-      -- vim.cmd.colorscheme 'solarized'
+      local success, solarized = pcall(require, 'solarized')
+
+      vim.o.background = 'dark'
+      solarized:setup {
+        config = {
+          theme = 'vim',
+          transparent = false,
+          highlights = function(colors, darken, lighten, blend)
+            return {
+              NormalNC = { link = 'Normal' }
+            }
+          end
+        }
+      }
+      vim.cmd.colorscheme 'solarized'
     end,
   },
 
