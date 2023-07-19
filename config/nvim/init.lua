@@ -55,6 +55,13 @@ require('lazy').setup({
     },
   },
 
+  -- null-ls for ts formatting...other language servers can handle formatting on their own
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    event = { "BufReadPre", "BufNewFile" },
+    dependencies = { "mason.nvim" },
+  },
+
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
@@ -421,7 +428,7 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  denols = {},
+  -- denols = {},
   gopls = {},
   lua_ls = {
     Lua = {
@@ -430,6 +437,9 @@ local servers = {
     },
   },
   standardrb = {},
+  tsserver = {},
+  -- solargraph = {},
+  -- ruby_ls = {},
 }
 
 -- Setup neovim lua configuration
@@ -516,3 +526,11 @@ vim.keymap.set('n', '<leader>so', ':source %<CR>:lua vim.notify("File sourced!")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+local null_ls = require("null-ls")
+
+null_ls.setup({
+  sources = {
+    null_ls.builtins.formatting.prettier,
+  },
+})
