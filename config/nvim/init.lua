@@ -212,6 +212,8 @@ require('lazy').setup({
 -- Set highlight on search
 vim.o.hlsearch = true
 
+vim.opt.cursorline = true
+
 -- Make line numbers default
 vim.wo.number = true
 
