@@ -47,10 +47,16 @@
   rbi = "!git rebase -i `git merge-base master HEAD`"
   rs = rebase --skip
   st = status -sb
-  todo = "!git --no-pager diff -U0 master | rg 'TODO|debugger' | sed 's/^+//' | git --no-pager grep -nFf - 2> /dev/null"
+  todo = "!git --no-pager diff -U0 main | rg 'TODO|debugger' | sed 's/^+//' | git --no-pager grep -nFf - 2> /dev/null"
   uncommit = reset --soft HEAD^
   unstage = reset
   wip = "!git add . && git commit -m 'wip'"
 
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status -25
   ch = log --pretty=format:\"%C(yellow)%h %Cblue%>(12,trunc)%ad %Cgreen%<(15,trunc)%aN%Cred%d %Creset%s\" --date=relative
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
