@@ -13,7 +13,7 @@ alias dots='cd ~/src/dotfiles'
 alias tils='cd ~/src/ayunker/til'
 alias vdots='v ~/src/dotfiles'
 alias sublime_packages='cd "/Users/tonyyunker/Library/Application Support/Sublime Text 3/Packages"'
-alias show_me_the_path="echo \"${PATH//:/$'\n'}\""
+alias gimme_path="echo \"${PATH//:/$'\n'}\""
 alias tmm="tmuxinator"
 alias tma="tmux -2 a"
 
