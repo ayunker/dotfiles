@@ -85,16 +85,6 @@ require('lazy').setup({
     },
   },
 
-  -- {
-  --   'peterlvilim/solarized.nvim',
-  --   commit = '93f9c79',
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd [[set background=light]]
-  --     vim.cmd.colorscheme 'solarized'
-  --   end,
-  -- },
-
   {
     'maxmx03/solarized.nvim',
     priority = 1000,
@@ -117,21 +107,21 @@ require('lazy').setup({
     end,
   },
 
-  {
-    'rebelot/kanagawa.nvim',
-    priority = 1000,
-    config = function()
-      -- vim.cmd.colorscheme 'kanagawa'
-    end,
-  },
+  -- {
+  --   'rebelot/kanagawa.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'kanagawa'
+  --   end,
+  -- },
 
-  {
-    'folke/tokyonight.nvim',
-    priority = 1000,
-    config = function()
-      -- vim.cmd.colorscheme 'tokyonight'
-    end,
-  },
+  -- {
+  --   'folke/tokyonight.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'tokyonight'
+  --   end,
+  -- },
 
   {
     -- Set lualine as statusline
