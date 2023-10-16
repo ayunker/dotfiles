@@ -48,7 +48,11 @@ require('lazy').setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
+      {
+        'j-hui/fidget.nvim',
+        tag = "legacy",
+        opts = {}
+      },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
@@ -88,6 +92,8 @@ require('lazy').setup({
   {
     'maxmx03/solarized.nvim',
     priority = 1000,
+    -- pin to this commit, I don't like the updates to the theme
+    commit = "fc15218b704ac9353bb6c953daf35c325c44e65b",
     config = function()
       local success, solarized = pcall(require, 'solarized')
 
