@@ -19,7 +19,7 @@ alias tmm="tmuxinator"
 alias tma="tmux -2 a"
 
 # better ls
-[[ -s $(which exa) ]] && alias l='exa -lha' && alias ls=exa
+[[ -s $(which eza) ]] && alias l='eza -lha' && alias ls=eza
 
 alias zr='zeus rspec'
 
