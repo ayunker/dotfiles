@@ -20,157 +20,227 @@ window:
   decorations: buttonless
 
 schemes:
-  solarized_dark: &dark
-    # Default colors
+  solarized_dark: &dark # Default colors
     primary:
-      background: '0x002b36'
-      foreground: '#a3afb1' # 3 tints lighter than incumbent
+      background: "0x002b36"
+      foreground: "#a3afb1" # 3 tints lighter than incumbent
 
     # Normal colors
     normal:
-      black:   '0x073642'
-      red:     '0xdc322f'
-      green:   '0x859900'
-      yellow:  '0xb58900'
-      blue:    '0x268bd2'
-      magenta: '0xd33682'
-      cyan:    '0x2aa198'
-      white:   '0xeee8d5'
+      black: "0x073642"
+      red: "0xdc322f"
+      green: "0x859900"
+      yellow: "0xb58900"
+      blue: "0x268bd2"
+      magenta: "0xd33682"
+      cyan: "0x2aa198"
+      white: "0xeee8d5"
 
     # Bright colors
     bright:
-      black:   '0x002b36'
-      red:     '0xcb4b16'
-      green:   '0x586e75'
-      yellow:  '0x657b83'
-      blue:    '0x839496'
-      magenta: '0x6c71c4'
-      cyan:    '0x93a1a1'
-      white:   '0xfdf6e3'
-  solarized_light: &light
-    # Default colors
+      black: "0x002b36"
+      red: "0xcb4b16"
+      green: "0x586e75"
+      yellow: "0x657b83"
+      blue: "0x839496"
+      magenta: "0x6c71c4"
+      cyan: "0x93a1a1"
+      white: "0xfdf6e3"
+  solarized_light: &light # Default colors
     primary:
-      background: '0xfdf6e3'
-      foreground: '0x586e75'
+      background: "0xfdf6e3"
+      foreground: "0x586e75"
 
     # Normal colors
     normal:
-      black:   '0x073642'
-      red:     '0xdc322f'
-      green:   '0x859900'
-      yellow:  '0xb58900'
-      blue:    '0x268bd2'
-      magenta: '0xd33682'
-      cyan:    '0x2aa198'
-      white:   '0xeee8d5'
+      black: "0x073642"
+      red: "0xdc322f"
+      green: "0x859900"
+      yellow: "0xb58900"
+      blue: "0x268bd2"
+      magenta: "0xd33682"
+      cyan: "0x2aa198"
+      white: "0xeee8d5"
 
     # Bright colors
     bright:
-      black:   '0x002b36'
-      red:     '0xcb4b16'
-      green:   '0x586e75'
-      yellow:  '0x657b83'
-      blue:    '0x839496'
-      magenta: '0x6c71c4'
-      cyan:    '0x93a1a1'
-      white:   '0xfdf6e3'
+      black: "0x002b36"
+      red: "0xcb4b16"
+      green: "0x586e75"
+      yellow: "0x657b83"
+      blue: "0x839496"
+      magenta: "0x6c71c4"
+      cyan: "0x93a1a1"
+      white: "0xfdf6e3"
 
   tokyo_night_storm: &storm
     primary:
-      background: '0x24283b'
-      foreground: '0xc0caf5'
+      background: "0x24283b"
+      foreground: "0xc0caf5"
 
     # Normal colors
     normal:
-      black: '0x1D202F'
-      red: '0xf7768e'
-      green: '0x9ece6a'
-      yellow: '0xe0af68'
-      blue: '0x7aa2f7'
-      magenta: '0xbb9af7'
-      cyan: '0x7dcfff'
-      white: '0xa9b1d6'
+      black: "0x1D202F"
+      red: "0xf7768e"
+      green: "0x9ece6a"
+      yellow: "0xe0af68"
+      blue: "0x7aa2f7"
+      magenta: "0xbb9af7"
+      cyan: "0x7dcfff"
+      white: "0xa9b1d6"
 
     # Bright colors
     bright:
-      black: '0x414868'
-      red: '0xf7768e'
-      green: '0x9ece6a'
-      yellow: '0xe0af68'
-      blue: '0x7aa2f7'
-      magenta: '0xbb9af7'
-      cyan: '0x7dcfff'
-      white: '0xc0caf5'
+      black: "0x414868"
+      red: "0xf7768e"
+      green: "0x9ece6a"
+      yellow: "0xe0af68"
+      blue: "0x7aa2f7"
+      magenta: "0xbb9af7"
+      cyan: "0x7dcfff"
+      white: "0xc0caf5"
 
     indexed_colors:
-      - { index: 16, color: '0xff9e64' }
-      - { index: 17, color: '0xdb4b4b' }
+      - { index: 16, color: "0xff9e64" }
+      - { index: 17, color: "0xdb4b4b" }
 
   tokyo_night_night: &night
     primary:
-      background: '0x1a1b26'
-      foreground: '0xc0caf5'
+      background: "0x1a1b26"
+      foreground: "0xc0caf5"
 
     # Normal colors
     normal:
-      black:   '0x15161e'
-      red:     '0xf7768e'
-      green:   '0x9ece6a'
-      yellow:  '0xe0af68'
-      blue:    '0x7aa2f7'
-      magenta: '0xbb9af7'
-      cyan:    '0x7dcfff'
-      white:   '0xa9b1d6'
+      black: "0x15161e"
+      red: "0xf7768e"
+      green: "0x9ece6a"
+      yellow: "0xe0af68"
+      blue: "0x7aa2f7"
+      magenta: "0xbb9af7"
+      cyan: "0x7dcfff"
+      white: "0xa9b1d6"
 
     # Bright colors
     bright:
-      black:   '0x414868'
-      red:     '0xf7768e'
-      green:   '0x9ece6a'
-      yellow:  '0xe0af68'
-      blue:    '0x7aa2f7'
-      magenta: '0xbb9af7'
-      cyan:    '0x7dcfff'
-      white:   '0xc0caf5'
+      black: "0x414868"
+      red: "0xf7768e"
+      green: "0x9ece6a"
+      yellow: "0xe0af68"
+      blue: "0x7aa2f7"
+      magenta: "0xbb9af7"
+      cyan: "0x7dcfff"
+      white: "0xc0caf5"
 
     indexed_colors:
-      - { index: 16, color: '0xff9e64' }
-      - { index: 17, color: '0xdb4b4b' }
+      - { index: 16, color: "0xff9e64" }
+      - { index: 17, color: "0xdb4b4b" }
 
   kanagawa: &kanagawa
     primary:
-      background: '0x1f1f28'
-      foreground: '0xdcd7ba'
+      background: "0x1f1f28"
+      foreground: "0xdcd7ba"
 
     normal:
-      black:   '0x090618'
-      red:     '0xc34043'
-      green:   '0x76946a'
-      yellow:  '0xc0a36e'
-      blue:    '0x7e9cd8'
-      magenta: '0x957fb8'
-      cyan:    '0x6a9589'
-      white:   '0xc8c093'
+      black: "0x090618"
+      red: "0xc34043"
+      green: "0x76946a"
+      yellow: "0xc0a36e"
+      blue: "0x7e9cd8"
+      magenta: "0x957fb8"
+      cyan: "0x6a9589"
+      white: "0xc8c093"
 
     bright:
-      black:   '0x727169'
-      red:     '0xe82424'
-      green:   '0x98bb6c'
-      yellow:  '0xe6c384'
-      blue:    '0x7fb4ca'
-      magenta: '0x938aa9'
-      cyan:    '0x7aa89f'
-      white:   '0xdcd7ba'
+      black: "0x727169"
+      red: "0xe82424"
+      green: "0x98bb6c"
+      yellow: "0xe6c384"
+      blue: "0x7fb4ca"
+      magenta: "0x938aa9"
+      cyan: "0x7aa89f"
+      white: "0xdcd7ba"
 
     selection:
-      background: '0x2d4f67'
-      foreground: '0xc8c093'
+      background: "0x2d4f67"
+      foreground: "0xc8c093"
 
     indexed_colors:
-      - { index: 16, color: '0xffa066' }
-      - { index: 17, color: '0xff5d62' }
+      - { index: 16, color: "0xffa066" }
+      - { index: 17, color: "0xff5d62" }
 
-colors: *dark
+  cpnmco: &cpnmco
+    primary:
+      background: "#24273A" # base
+      foreground: "#CAD3F5" # text
+      # Bright and dim foreground colors
+      dim_foreground: "#CAD3F5" # text
+      bright_foreground: "#CAD3F5" # text
+
+    cursor:
+      text: "#24273A" # base
+      cursor: "#F4DBD6" # rosewater
+    vi_mode_cursor:
+      text: "#24273A" # base
+      cursor: "#B7BDF8" # lavender
+
+    search:
+      matches:
+        foreground: "#24273A" # base
+        background: "#A5ADCB" # subtext0
+      focused_match:
+        foreground: "#24273A" # base
+        background: "#A6DA95" # green
+      footer_bar:
+        foreground: "#24273A" # base
+        background: "#A5ADCB" # subtext0
+
+    hints:
+      start:
+        foreground: "#24273A" # base
+        background: "#EED49F" # yellow
+      end:
+        foreground: "#24273A" # base
+        background: "#A5ADCB" # subtext0
+
+    selection:
+      text: "#24273A" # base
+      background: "#F4DBD6" # rosewater
+
+    normal:
+      black: "#494D64" # surface1
+      red: "#ED8796" # red
+      green: "#A6DA95" # green
+      yellow: "#EED49F" # yellow
+      blue: "#8AADF4" # blue
+      magenta: "#F5BDE6" # pink
+      cyan: "#8BD5CA" # teal
+      white: "#B8C0E0" # subtext1
+
+    bright:
+      black: "#5B6078" # surface2
+      red: "#ED8796" # red
+      green: "#A6DA95" # green
+      yellow: "#EED49F" # yellow
+      blue: "#8AADF4" # blue
+      magenta: "#F5BDE6" # pink
+      cyan: "#8BD5CA" # teal
+      white: "#A5ADCB" # subtext0
+
+    dim:
+      black: "#494D64" # surface1
+      red: "#ED8796" # red
+      green: "#A6DA95" # green
+      yellow: "#EED49F" # yellow
+      blue: "#8AADF4" # blue
+      magenta: "#F5BDE6" # pink
+      cyan: "#8BD5CA" # teal
+      white: "#B8C0E0" # subtext1
+
+    indexed_colors:
+      - { index: 16, color: "#F5A97F" }
+      - { index: 17, color: "#F4DBD6" }
+
+colors: *cpnmco
 
 key_bindings:
   ## TMUX SPECIFIC THINGSS...see https://www.joshmedeski.com/posts/macos-keyboard-shortcuts-for-tmux
