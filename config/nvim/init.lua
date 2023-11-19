@@ -59,13 +59,6 @@ require('lazy').setup({
     },
   },
 
-  -- null-ls for ts formatting...other language servers can handle formatting on their own
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    event = { "BufReadPre", "BufNewFile" },
-    dependencies = { "mason.nvim" },
-  },
-
   {
     -- Autocompletion
     'hrsh7th/nvim-cmp',
@@ -85,6 +78,26 @@ require('lazy').setup({
         delete = { text = '_' },
         topdelete = { text = '‾' },
         changedelete = { text = '~' },
+      },
+    },
+  },
+
+  {
+    'stevearc/conform.nvim',
+    -- Everything in opts will be passed to setup()
+    opts = {
+      -- Define your formatters
+      formatters_by_ft = {
+        javascript = { "standardjs" },
+        typescript = { { "prettierd", "prettier" } },
+      },
+      -- Set up format-on-save
+      format_on_save = { timeout_ms = 500, lsp_fallback = true },
+      -- Customize formatters
+      formatters = {
+        shfmt = {
+          prepend_args = { "-i", "2" },
+        },
       },
     },
   },
@@ -201,7 +214,30 @@ require('lazy').setup({
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     },
+  },
+
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- required
+      -- "nvim-telescope/telescope.nvim", -- optional
+      -- "sindrets/diffview.nvim",      -- optional
+      -- "ibhagwan/fzf-lua",            -- optional
+    },
+    config = true
+  },
+
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      signs = false,
+      highlight = {
+        multiline = false
+      }
+    }
   }
+
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
@@ -568,11 +604,3 @@ vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
-
-local null_ls = require("null-ls")
-
-null_ls.setup({
-  sources = {
-    null_ls.builtins.formatting.prettierd,
-  },
-})
