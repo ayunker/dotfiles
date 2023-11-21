@@ -1,7 +1,7 @@
 #general
 alias v='nvim'
 alias vi='nvim'
-alias vv='nvim -c ":Git"'
+alias vv='nvim -c ":Neogit"'
 alias vimrc='v ~/.vimrc'
 alias viminit='v ~/.config/nvim/init.vim'
 alias bashrc='v ~/.bashrc'
