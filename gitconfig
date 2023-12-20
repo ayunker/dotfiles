@@ -42,7 +42,7 @@
   please = push --force-with-lease
   ps = "!git push origin staging && git push staging staging:master"
   psf = "!git push staging staging:master --force"
-  put = push origin HEAD
+  put = push origin HEAD -u
   rbc = rebase --continue
   rbi = "!git rebase -i `git merge-base master HEAD`"
   rs = rebase --skip
