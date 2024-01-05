@@ -19,3 +19,4 @@ mkdir ~/bin
 ln -sf ~/src/dotfiles/bin/ass ~/bin/ass
 ln -sf ~/src/dotfiles/bin/tiller ~/bin/tiller
 ln -sf ~/src/dotfiles/bin/scmp ~/bin/scmp
+ln -sf ~/src/dotfiles/bin/nukeit ~/bin/nukeit

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "🚻 RESETTING PACKAGE STUFF"
+git co package.json
+git co package-lock.json
+echo "💣 NUKING NODE MODULES"
+rm -rf node_modules/
+echo "🎉 DONE"
