@@ -102,35 +102,35 @@ require('lazy').setup({
     },
   },
 
-  -- {
-  --   'maxmx03/solarized.nvim',
-  --   priority = 1000,
-  --   -- pin to this commit, I don't like the updates to the theme
-  --   commit = "fc15218b704ac9353bb6c953daf35c325c44e65b",
-  --   config = function()
-  --     local success, solarized = pcall(require, 'solarized')
-  --
-  --     vim.o.background = 'dark'
-  --     solarized:setup {
-  --       config = {
-  --         theme = 'vim',
-  --         transparent = false,
-  --         highlights = function(colors, darken, lighten, blend)
-  --           return {
-  --             NormalNC = { link = 'Normal' }
-  --           }
-  --         end
-  --       }
-  --     }
-  --     vim.cmd.colorscheme 'solarized'
-  --   end,
-  -- },
+  {
+    'maxmx03/solarized.nvim',
+    priority = 1000,
+    -- pin to this commit, I don't like the updates to the theme
+    commit = "fc15218b704ac9353bb6c953daf35c325c44e65b",
+    config = function()
+      local success, solarized = pcall(require, 'solarized')
+
+      vim.o.background = 'dark'
+      solarized:setup {
+        config = {
+          theme = 'vim',
+          transparent = false,
+          highlights = function(colors, darken, lighten, blend)
+            return {
+              NormalNC = { link = 'Normal' }
+            }
+          end
+        }
+      }
+      vim.cmd.colorscheme 'solarized'
+    end,
+  },
 
   -- {
   --   'rebelot/kanagawa.nvim',
   --   priority = 1000,
   --   config = function()
-  --     vim.cmd.colorscheme 'kanagawa'
+  --     vim.cmd.colorscheme 'kanagawa-wave'
   --   end,
   -- },
 
@@ -138,24 +138,24 @@ require('lazy').setup({
   --   'folke/tokyonight.nvim',
   --   priority = 1000,
   --   config = function()
-  --     vim.cmd.colorscheme 'tokyonight'
+  --     vim.cmd.colorscheme 'tokyonight-night'
   --   end,
   -- },
 
-  {
-    "catppuccin/nvim",
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'catppuccin-macchiato'
-    end,
-  },
+  -- {
+  --   "catppuccin/nvim",
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'catppuccin-macchiato'
+  --   end,
+  -- },
 
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     opts = {
       options = {
-        theme = 'catppuccin-latte',
+        theme = 'solarized_light',
       },
       sections = {
         lualine_a = { 'mode' },

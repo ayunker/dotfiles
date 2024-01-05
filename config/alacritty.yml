@@ -4,7 +4,7 @@ env:
   CSCHEME: solarized
 
 font:
-  size: 16.0
+  size: 14.0
 
   normal:
     family: FiraCode Nerd Font
@@ -240,7 +240,7 @@ schemes:
       - { index: 16, color: "#F5A97F" }
       - { index: 17, color: "#F4DBD6" }
 
-colors: *cpnmco
+colors: *dark
 
 key_bindings:
   ## TMUX SPECIFIC THINGSS...see https://www.joshmedeski.com/posts/macos-keyboard-shortcuts-for-tmux
