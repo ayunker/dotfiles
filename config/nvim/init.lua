@@ -254,8 +254,12 @@ require('lazy').setup({
         multiline = false
       }
     }
-  }
+  },
 
+  {
+    "ayunker/nvim-chainsaw",
+    branch = "ruby"
+  },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
@@ -615,6 +619,15 @@ vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
   { silent = true, noremap = true }
 )
 -- END TROUBLE
+
+-- chainsaw mappings
+vim.keymap.set('n', '<leader>lb', require('chainsaw').beepLog, { desc = 'BeEP' })
+vim.keymap.set('n', '<leader>lt', require('chainsaw').timeLog, { desc = 'Log Time' })
+vim.keymap.set('n', '<leader>lm', require('chainsaw').messageLog, { desc = 'Log Message' })
+vim.keymap.set('n', '<leader>lo', require('chainsaw').objectLog, { desc = 'Log Object' })
+vim.keymap.set('n', '<leader>lv', require('chainsaw').variableLog, { desc = 'Log Variable' })
+vim.keymap.set('n', '<leader>lr', require('chainsaw').removeLogs, { desc = 'Remove Chainsaw Logs' })
+-- end chainsaw mappings
 
 
 -- is this a sledgehammer? totally wrong way? it works for meow
