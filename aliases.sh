@@ -1,4 +1,5 @@
 #general
+alias ..='cd ..'
 alias v='nvim'
 alias vi='nvim'
 alias vv='nvim -c ":Neogit"'
