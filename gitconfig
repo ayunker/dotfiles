@@ -44,7 +44,7 @@
   psf = "!git push staging staging:master --force"
   put = push origin HEAD -u
   rbc = rebase --continue
-  rbi = "!git rebase -i `git merge-base master HEAD`"
+  rbi = rebase -i
   rs = rebase --skip
   st = status -sb
   todo = "!git --no-pager diff -U0 main | rg 'TODO|debugger' | sed 's/^+//' | git --no-pager grep -nFf - 2> /dev/null"
