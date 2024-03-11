@@ -107,6 +107,7 @@ require('lazy').setup({
     priority = 1000,
     -- pin to this commit, I don't like the updates to the theme
     commit = "fc15218b704ac9353bb6c953daf35c325c44e65b",
+    pin = true,
     config = function()
       local success, solarized = pcall(require, 'solarized')
 
@@ -629,9 +630,11 @@ vim.keymap.set('n', '<leader>lv', require('chainsaw').variableLog, { desc = 'Log
 vim.keymap.set('n', '<leader>lr', require('chainsaw').removeLogs, { desc = 'Remove Chainsaw Logs' })
 -- end chainsaw mappings
 
+vim.keymap.set('n', ']c', require('gitsigns').next_hunk, { desc = 'Next Hunk' })
+vim.keymap.set('n', '[c', require('gitsigns').prev_hunk, { desc = 'Previous Hunk' })
 
--- is this a sledgehammer? totally wrong way? it works for meow
+vim.keymap.set('n', '<leader>nn', require('neogit').open, { desc = 'Neogit' })
+
+
+-- is this a sledgehammer? totally wrong way? it works for now
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
-
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
