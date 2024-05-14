@@ -262,6 +262,15 @@ require('lazy').setup({
     branch = "ruby"
   },
 
+  {
+    "NoahTheDuke/vim-just",
+    ft = { "just" },
+  },
+
+  {
+    'andymass/vim-matchup',
+  },
+
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -448,6 +457,9 @@ require('nvim-treesitter.configs').setup {
       },
     },
   },
+  matchup = {
+    enable = true
+  }
 }
 
 -- Diagnostic keymaps
