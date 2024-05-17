@@ -48,7 +48,7 @@ return {
         -- You can remove this line if you know what you're doing :)
         if client.name == 'tsserver' then
           -- total fucking hack
-          client.name = "null-ls"
+          client.name = "conform"
         end
 
         -- Create an autocmd that will run *before* we save the buffer.
