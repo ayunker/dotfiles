@@ -645,6 +645,8 @@ vim.keymap.set('n', '<leader>lr', require('chainsaw').removeLogs, { desc = 'Remo
 vim.keymap.set('n', ']c', require('gitsigns').next_hunk, { desc = 'Next Hunk' })
 vim.keymap.set('n', '[c', require('gitsigns').prev_hunk, { desc = 'Previous Hunk' })
 
+vim.keymap.set('n', 'gb', "<cmd>Git blame<cr>", { silent = true, noremap = true })
+
 vim.keymap.set('n', '<leader>nn', require('neogit').open, { desc = 'Neogit' })
 
 
