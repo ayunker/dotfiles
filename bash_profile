@@ -42,3 +42,6 @@ pyenv() {
 export PATH="/opt/homebrew/bin:$PATH"
 
 . "/opt/homebrew/opt/asdf/libexec/asdf.sh"
+
+# opam configuration
+test -r /Users/bear/.opam/opam-init/init.sh && . /Users/bear/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true

@@ -41,4 +41,5 @@ show_me_the_gem() {
 # }
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
+eval "$(fzf --bash)"
 eval "$(~/src/hr/hr/libexec/hr init -)"
