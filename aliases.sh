@@ -20,6 +20,7 @@ alias tmm="tmuxinator"
 alias tma="tmux -2 a"
 alias b="bat"
 alias lazy="NVIM_APPNAME=LazyVim nvim"
+alias yy="yazi"
 
 # better ls
 [[ -s $(which eza) ]] && alias l='eza -lha' && alias ls=eza
