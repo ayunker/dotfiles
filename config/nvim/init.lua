@@ -323,6 +323,36 @@ require('lazy').setup({
     end,
   },
 
+  {
+    'tpope/vim-projectionist',
+    config = function()
+      vim.g.projectionist_heuristics = {
+        ["package.json"] = {
+          ["*.tsx"] = {
+            alternate = {
+              "{dirname}/__tests__/{basename}.test.tsx"
+            }
+          },
+          ["*.test.tsx"] = {
+            alternate = {
+              "{dirname}/../{basename}.tsx"
+            }
+          },
+          ["*.ts"] = {
+            alternate = {
+              "{dirname}/__tests__/{basename}.test.ts"
+            }
+          },
+          ["*.test.ts"] = {
+            alternate = {
+              "{dirname}/../{basename}.ts"
+            }
+          }
+        }
+      }
+    end,
+  },
+
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
