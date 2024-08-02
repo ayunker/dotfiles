@@ -34,6 +34,7 @@ require('lazy').setup({
 
   'tpope/vim-rails',
   'tpope/vim-surround',
+  'tpope/vim-abolish',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
@@ -135,13 +136,21 @@ require('lazy').setup({
   --   end,
   -- },
 
-  -- {
-  --   'rebelot/kanagawa.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme 'kanagawa-wave'
-  --   end,
-  -- },
+  {
+    'rebelot/kanagawa.nvim',
+    priority = 1000,
+    -- config = function()
+    --   vim.cmd.colorscheme 'kanagawa-wave'
+    -- end,
+  },
+
+  {
+    "EdenEast/nightfox.nvim",
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'nightfox'
+    end
+  },
 
   -- {
   --   'folke/tokyonight.nvim',
@@ -151,13 +160,13 @@ require('lazy').setup({
   --   end,
   -- },
 
-  -- {
-  --   "catppuccin/nvim",
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme 'catppuccin-macchiato'
-  --   end,
-  -- },
+  {
+    "catppuccin/nvim",
+    priority = 1000,
+    -- config = function()
+    --   vim.cmd.colorscheme 'catppuccin-macchiato'
+    -- end,
+  },
 
   {
     -- Set lualine as statusline
