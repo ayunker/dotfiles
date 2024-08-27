@@ -45,3 +45,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # opam configuration
 test -r /Users/bear/.opam/opam-init/init.sh && . /Users/bear/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+
+# Added by OrbStack: command-line tools and integration
+# Comment this line if you don't want it to be added again.
+source ~/.orbstack/shell/init.bash 2>/dev/null || :
