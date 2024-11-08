@@ -32,7 +32,6 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
-  'tpope/vim-rails',
   'tpope/vim-surround',
   'tpope/vim-abolish',
 
@@ -139,16 +138,16 @@ require('lazy').setup({
   {
     'rebelot/kanagawa.nvim',
     priority = 1000,
-    -- config = function()
-    --   vim.cmd.colorscheme 'kanagawa-wave'
-    -- end,
+    config = function()
+      -- vim.cmd.colorscheme 'kanagawa-wave'
+    end,
   },
 
   {
     "EdenEast/nightfox.nvim",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'nightfox'
+      -- vim.cmd.colorscheme 'nightfox'
     end
   },
 
@@ -202,7 +201,7 @@ require('lazy').setup({
               ["<c-d>"] = "delete_buffer",
             },
             n = {
-              ["d"] = "delete_buffer"
+              ["d"] = "delete_buffer",
             }
           }
         }
@@ -341,35 +340,37 @@ require('lazy').setup({
     end,
   },
 
-  {
-    'tpope/vim-projectionist',
-    config = function()
-      vim.g.projectionist_heuristics = {
-        ["package.json"] = {
-          ["*.tsx"] = {
-            alternate = {
-              "{dirname}/__tests__/{basename}.test.tsx"
-            }
-          },
-          ["*.test.tsx"] = {
-            alternate = {
-              "{dirname}/../{basename}.tsx"
-            }
-          },
-          ["*.ts"] = {
-            alternate = {
-              "{dirname}/__tests__/{basename}.test.ts"
-            }
-          },
-          ["*.test.ts"] = {
-            alternate = {
-              "{dirname}/../{basename}.ts"
-            }
-          }
-        }
-      }
-    end,
-  },
+  -- {
+  --   'tpope/vim-projectionist',
+  --   config = function()
+  --     vim.g.projectionist_heuristics = {
+  --       ["package.json"] = {
+  --         ["*.tsx"] = {
+  --           alternate = {
+  --             "{dirname}/__tests__/{basename}.test.tsx"
+  --           }
+  --         },
+  --         ["*.test.tsx"] = {
+  --           alternate = {
+  --             "{dirname}/../{basename}.tsx"
+  --           }
+  --         },
+  --         ["*.ts"] = {
+  --           alternate = {
+  --             "{dirname}/__tests__/{basename}.test.ts"
+  --           }
+  --         },
+  --         ["*.test.ts"] = {
+  --           alternate = {
+  --             "{dirname}/../{basename}.ts"
+  --           }
+  --         }
+  --       }
+  --     }
+  --   end,
+  -- },
+
+  'tpope/vim-rails',
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
@@ -725,9 +726,14 @@ vim.keymap.set('n', '<leader>lr', require('chainsaw').removeLogs, { desc = 'Remo
 vim.keymap.set('n', ']c', require('gitsigns').next_hunk, { desc = 'Next Hunk' })
 vim.keymap.set('n', '[c', require('gitsigns').prev_hunk, { desc = 'Previous Hunk' })
 
+vim.keymap.set('n', '<leader>gs', require('gitsigns').stage_hunk, { desc = 'Stage Hunk' })
+
 vim.keymap.set('n', 'gb', "<cmd>Git blame<cr>", { silent = true, noremap = true })
 
 vim.keymap.set('n', '<leader>nn', require('neogit').open, { desc = 'Neogit' })
+vim.keymap.set('n', '<leader>vv', require('neogit').open, { desc = 'Neogit' })
+
+vim.keymap.set('n', '<leader>ll', ':e #<CR>')
 
 
 -- is this a sledgehammer? totally wrong way? it works for now
