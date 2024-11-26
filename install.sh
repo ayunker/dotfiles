@@ -9,6 +9,7 @@ ln -sf ~/src/dotfiles/config/nvim/init.vim ~/.config/nvim/init.vim
 ln -sf ~/src/dotfiles/config/bat/config ~/.config/bat/config
 ln -sf ~/src/dotfiles/wezterm.lua ~/.wezterm.lua
 ln -sf ~/src/dotfiles/config/alacritty ~/.config/alacritty
+ln -sf ~/src/dotfiles/config/helix ~/.config/helix
 # TODO: should I just symlink all of .config???
 
 # other stuff to do here
