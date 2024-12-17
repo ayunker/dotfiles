@@ -43,3 +43,7 @@ show_me_the_gem() {
 
 eval "$(fzf --bash)"
 eval "$(~/src/hr/hr/libexec/hr init -)"
+
+eval "$(/opt/homebrew/bin/mise activate bash)"
+
+# . "/opt/homebrew/opt/asdf/libexec/asdf.sh"
