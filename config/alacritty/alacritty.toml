@@ -1,17 +1,10 @@
-live_config_reload = true
-
-import = [
-  "~/.config/alacritty/keybindings.toml",
-  "~/.config/alacritty/solarized_dark.toml"
-  ]
-
 [font]
+# size down 4 times for a nice size
 size = 14.0
 
 [font.normal]
 family = "FiraCode Nerd Font"
 style = "Light"
-
 
 [selection]
 save_to_clipboard = true
@@ -22,3 +15,12 @@ decorations = "buttonless"
 [window.padding]
 x = 5
 y = 2
+
+[general]
+live_config_reload = true
+
+import = [
+  "~/.config/alacritty/keybindings.toml",
+  # "~/.config/alacritty/kanagawa.toml"
+  "~/.config/alacritty/solarized_dark.toml"
+  ]
