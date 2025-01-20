@@ -13,9 +13,6 @@ alias cls='clear'
 alias reshell='source ~/.bashrc'
 alias dots='cd ~/src/dotfiles'
 alias tils='cd ~/src/ayunker/til'
-alias vdots='v ~/src/dotfiles'
-alias sublime_packages='cd "/Users/tonyyunker/Library/Application Support/Sublime Text 3/Packages"'
-alias gimme_path="echo \"${PATH//:/$'\n'}\""
 alias tmm="tmuxinator"
 alias tma="tmux -2 a"
 alias b="bat"
@@ -25,32 +22,12 @@ alias yy="yazi"
 # better ls
 [[ -s $(which eza) ]] && alias l='eza -lha' && alias ls=eza
 
-alias zr='zeus rspec'
-
 # git
 alias gs='git status'
 alias gst='git status'
 
-# alias gl='git log --oneline -10'
-# alias gll='git log --oneline -50'
 alias gl='git ch -25'
 alias gll='git ch -50'
-
-# rails
-alias rs='rails server'
-alias rc='rails console'
-
-# RSpec
-alias rsm='rspec spec/models'
-alias rsc='rspec spec/controllers'
-alias rsf='rspec spec/features'
-alias rsl='rspec spec/lib'
-alias rsh='rspec spec/helpers'
-alias rsj='rspec spec/jobs'
-alias rsu='rspec --tag ~type:feature'
-alias rsup="rake parallel:spec['spec\/(?!features)']"
-alias rsfp="rake parallel:spec['spec/features']"
-alias rsd="git diff --name-only | rg _spec | xargs bin/rspec"
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
