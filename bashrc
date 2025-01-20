@@ -1,6 +1,6 @@
 # Aliases
-if [ -f ~/.aliases.sh ]; then
-  source ~/.aliases.sh
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
 fi
 
 # secrets
