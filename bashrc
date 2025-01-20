@@ -40,11 +40,6 @@ gb() {
   git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
-eval "$(fzf --bash)"
-eval "$(~/src/hr/hr/libexec/hr init -)"
-
-eval "$(/opt/homebrew/bin/mise activate bash)"
-
 # opam configuration
 test -r /Users/bear/.opam/opam-init/init.sh && . /Users/bear/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 
@@ -52,4 +47,10 @@ test -r /Users/bear/.opam/opam-init/init.sh && . /Users/bear/.opam/opam-init/ini
 # Comment this line if you don't want it to be added again.
 source ~/.orbstack/shell/init.bash 2>/dev/null || :
 
+eval "$(fzf --bash)"
+eval "$(~/src/hr/hr/libexec/hr init -)"
+
+eval "$(/opt/homebrew/bin/mise activate bash)"
+#
 # . "/opt/homebrew/opt/asdf/libexec/asdf.sh"
+

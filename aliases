@@ -20,7 +20,8 @@ alias lazy="NVIM_APPNAME=LazyVim nvim"
 alias yy="yazi"
 
 # better ls
-[[ -s $(which eza) ]] && alias l='eza -lha' && alias ls=eza
+alias l='eza -lha' 
+alias ls=eza
 
 # git
 alias gs='git status'
