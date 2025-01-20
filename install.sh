@@ -12,12 +12,6 @@ ln -sf ~/src/dotfiles/config/alacritty ~/.config/alacritty
 ln -sf ~/src/dotfiles/config/helix ~/.config/helix
 # TODO: should I just symlink all of .config???
 
-# other stuff to do here
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# then run :PlugInstall in vim
-
 mkdir ~/bin
 ln -sf ~/src/dotfiles/bin/ass ~/bin/ass
 ln -sf ~/src/dotfiles/bin/tiller ~/bin/tiller
