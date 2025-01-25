@@ -105,9 +105,27 @@ require('lazy').setup({
     'lifepillar/vim-solarized8',
     branch = 'neovim',
     config = function()
-      vim.o.background = 'dark'
-      vim.cmd.colorscheme 'solarized8'
+      -- vim.o.background = 'dark'
+      -- vim.cmd.colorscheme 'solarized8'
     end
+  },
+
+  {
+    "svrana/neosolarized.nvim",
+    opts = {
+      comment_italics = true,
+      background_set = false,
+    },
+    config = function()
+      -- require("neosolarized").setup({
+      --   comment_italics = true,
+      --   background_set = true,
+      -- })
+      -- vim.cmd.colorscheme("neosolarized")
+    end,
+    dependencies = {
+      "tjdevries/colorbuddy.nvim",
+    },
   },
 
   -- {
@@ -134,6 +152,19 @@ require('lazy').setup({
   --     vim.cmd.colorscheme 'solarized'
   --   end,
   -- },
+  {
+    'maxmx03/solarized.nvim',
+    lazy = false,
+    priority = 1000,
+    ---@type solarized.config
+    opts = {},
+    config = function(_, opts)
+      vim.o.termguicolors = true
+      vim.o.background = 'dark'
+      require('solarized').setup(opts)
+      vim.cmd.colorscheme 'solarized'
+    end,
+  },
 
   {
     'rebelot/kanagawa.nvim',
@@ -151,13 +182,13 @@ require('lazy').setup({
     end
   },
 
-  -- {
-  --   'folke/tokyonight.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme 'tokyonight-night'
-  --   end,
-  -- },
+  {
+    'folke/tokyonight.nvim',
+    priority = 1000,
+    config = function()
+      -- vim.cmd.colorscheme 'tokyonight-night'
+    end,
+  },
 
   {
     "catppuccin/nvim",
@@ -165,6 +196,12 @@ require('lazy').setup({
     -- config = function()
     --   vim.cmd.colorscheme 'catppuccin-macchiato'
     -- end,
+  },
+
+  {
+    "rose-pine/neovim",
+    priority = 1000,
+    name = "rose-pine"
   },
 
   {
@@ -340,35 +377,35 @@ require('lazy').setup({
     end,
   },
 
-  -- {
-  --   'tpope/vim-projectionist',
-  --   config = function()
-  --     vim.g.projectionist_heuristics = {
-  --       ["package.json"] = {
-  --         ["*.tsx"] = {
-  --           alternate = {
-  --             "{dirname}/__tests__/{basename}.test.tsx"
-  --           }
-  --         },
-  --         ["*.test.tsx"] = {
-  --           alternate = {
-  --             "{dirname}/../{basename}.tsx"
-  --           }
-  --         },
-  --         ["*.ts"] = {
-  --           alternate = {
-  --             "{dirname}/__tests__/{basename}.test.ts"
-  --           }
-  --         },
-  --         ["*.test.ts"] = {
-  --           alternate = {
-  --             "{dirname}/../{basename}.ts"
-  --           }
-  --         }
-  --       }
-  --     }
-  --   end,
-  -- },
+  {
+    'tpope/vim-projectionist',
+    config = function()
+      vim.g.projectionist_heuristics = {
+        ["package.json"] = {
+          ["*.tsx"] = {
+            alternate = {
+              "{dirname}/__tests__/{basename}.test.tsx"
+            }
+          },
+          ["*.test.tsx"] = {
+            alternate = {
+              "{dirname}/../{basename}.tsx"
+            }
+          },
+          ["*.ts"] = {
+            alternate = {
+              "{dirname}/__tests__/{basename}.test.ts"
+            }
+          },
+          ["*.test.ts"] = {
+            alternate = {
+              "{dirname}/../{basename}.ts"
+            }
+          }
+        }
+      }
+    end,
+  },
 
   'tpope/vim-rails',
 
@@ -495,7 +532,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'elixir', 'go', 'javascript', 'lua', 'markdown', 'python', 'ruby', 'rust', 'tsx',
+  ensure_installed = { 'c', 'cpp', 'elixir', 'gleam', 'go', 'javascript', 'lua', 'markdown', 'markdown_inline', 'python', 'ruby', 'rust', 'tsx',
     'typescript',
     'vimdoc',
     'vim' },
