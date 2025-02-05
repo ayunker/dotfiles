@@ -319,7 +319,6 @@ require('lazy').setup({
   {
     "NeogitOrg/neogit",
     pin = true,
-    tag = "v0.0.1",
     dependencies = {
       "nvim-lua/plenary.nvim", -- required
       -- "nvim-telescope/telescope.nvim", -- optional
@@ -666,7 +665,7 @@ local servers = {
     },
   },
   standardrb = {},
-  tsserver = {},
+  ts_ls = {},
   -- solargraph = {},
   -- ruby_ls = {},
 }
