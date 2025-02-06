@@ -83,12 +83,21 @@ require('lazy').setup({
 
   {
     'stevearc/conform.nvim',
-    -- Everything in opts will be passed to setup()
+    event = { 'BufWritePre' },
+    keys = {
+      {
+        '<leader>f',
+        function()
+          require('conform').format { async = true, lsp_format = 'fallback' }
+        end,
+        mode = '',
+        desc = '[F]ormat buffer',
+      },
+    },
     opts = {
-      -- Define your formatters
       formatters_by_ft = {
         javascript = { "standardjs" },
-        typescript = { { "prettierd", "prettier" } },
+        typescript = { "prettierd", "prettier", stop_after_first = true },
       },
       -- Set up format-on-save
       format_on_save = { timeout_ms = 500, lsp_fallback = true },
@@ -770,7 +779,3 @@ vim.keymap.set('n', '<leader>nn', require('neogit').open, { desc = 'Neogit' })
 vim.keymap.set('n', '<leader>vv', require('neogit').open, { desc = 'Neogit' })
 
 vim.keymap.set('n', '<leader>ll', ':e #<CR>')
-
-
--- is this a sledgehammer? totally wrong way? it works for now
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
