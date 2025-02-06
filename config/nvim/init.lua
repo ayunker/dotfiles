@@ -120,48 +120,6 @@ require('lazy').setup({
   },
 
   {
-    "svrana/neosolarized.nvim",
-    opts = {
-      comment_italics = true,
-      background_set = false,
-    },
-    config = function()
-      -- require("neosolarized").setup({
-      --   comment_italics = true,
-      --   background_set = true,
-      -- })
-      -- vim.cmd.colorscheme("neosolarized")
-    end,
-    dependencies = {
-      "tjdevries/colorbuddy.nvim",
-    },
-  },
-
-  -- {
-  --   'maxmx03/solarized.nvim',
-  --   priority = 1000,
-  --   -- pin to this commit, I don't like the updates to the theme
-  --   commit = "fc15218b704ac9353bb6c953daf35c325c44e65b",
-  --   pin = true,
-  --   config = function()
-  --     local success, solarized = pcall(require, 'solarized')
-  --
-  --     vim.o.background = 'dark'
-  --     solarized:setup {
-  --       config = {
-  --         theme = 'vim',
-  --         transparent = false,
-  --         highlights = function(colors, darken, lighten, blend)
-  --           return {
-  --             NormalNC = { link = 'Normal' }
-  --           }
-  --         end
-  --       }
-  --     }
-  --     vim.cmd.colorscheme 'solarized'
-  --   end,
-  -- },
-  {
     'maxmx03/solarized.nvim',
     lazy = false,
     priority = 1000,
