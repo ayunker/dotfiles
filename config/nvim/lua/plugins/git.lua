@@ -24,5 +24,13 @@ return {
       'nvim-lua/plenary.nvim', -- required
     },
     config = true,
+    opts = {
+      commit_editor = {
+        kind = "vsplit",
+        show_staged_diff = true,
+        staged_diff_split_kind = "split",
+        spell_check = true,
+      },
+    }
   },
 }
