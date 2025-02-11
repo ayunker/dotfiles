@@ -1,6 +1,3 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
