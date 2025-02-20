@@ -5,6 +5,10 @@ require 'optparse'
 TIL_DIR = "#{Dir.home}/src/ayunker/til"
 options = {}
 
+def present?(thing)
+  !thing.nil? && ((thing.respond_to?(:empty?) &&!thing.empty?) || !!thing)
+end
+
 OptionParser.new do |parser|
   parser.on('-s', '--subject SUBJECT', 'The subject for the TIL') do |v|
     options[:subject] = v
@@ -13,11 +17,21 @@ OptionParser.new do |parser|
   parser.on('-t', '--title TITLE', 'The title of the TIL') do |v|
     options[:title] = v
   end
+
+  parser.on('--topics', 'Lists the available topics') do |v|
+    options[:topics] = v
+  end
 end.parse!
 
-til_path = File.join(options[:subject], options[:title].downcase.split(' ').join('_')) + '.md'
+if present?(options[:topics])
+  exec("rg \\#\\#\\# #{File.join(TIL_DIR, 'README.md')}")
+end
 
-File.open(File.join(TIL_DIR, 'README.md'), 'a') { |f| f << "- [#{options[:title]}](#{til_path})" }
-File.open(File.join(TIL_DIR, til_path), 'a') { |f| f << "# #{options[:title]}" }
+if (present?(options[:subject]) && present?(options[:title]))
+  til_path = File.join(options[:subject], options[:title].downcase.split(' ').join('_')) + '.md'
 
-exec("nvim #{File.join(TIL_DIR, til_path)} #{File.join(TIL_DIR, 'README.md')}")
+  File.open(File.join(TIL_DIR, 'README.md'), 'a') { |f| f << "- [#{options[:title]}](#{til_path})" }
+  File.open(File.join(TIL_DIR, til_path), 'a') { |f| f << "# #{options[:title]}" }
+
+  exec("nvim #{File.join(TIL_DIR, til_path)} #{File.join(TIL_DIR, 'README.md')}")
+end
