@@ -1,0 +1,74 @@
+#!/usr/bin/env ruby
+
+require "pry"
+require "optparse"
+require "cgi"
+
+NOTE_ID = "CF1A8D2C-8004-4911-9945-36444E534F71"
+ADD_TEXT_OPTS = "&new_line=yes"\
+  "&open_note=yes"\
+  "&exclude_trashed=yes"\
+  "&show_window=yes"\
+  "&selected=no"\
+  "&mode=append"
+
+options = {}
+
+OptionParser.new do |parser|
+  parser.on('-b', '--bears BEARS', 'The bear rating') do |v|
+    options[:bear_rating] = v
+  end
+
+  parser.on("--book-club", "Marks as read for Book Club") do |v|
+    options[:book_club] = v
+  end
+
+  parser.on("--audio", "Marks as audiobook") do |v|
+    options[:format] = :audio
+  end
+
+  parser.on("--bookbook", "Marks as physical book") do |v|
+    options[:format] = :physical
+  end
+end.parse!
+
+if ARGV.size < 3
+  puts "Error: Missing required arguments you need TITLE AUTHOR and DATE"
+  exit 1
+end
+
+options[:title] = ARGV.shift
+options[:author] = ARGV.shift
+options[:date] = ARGV.shift
+
+bear_count = "🐻" * options[:bear_rating].to_i
+book_club_note = " (465 Book Club)" if options[:book_club]
+
+format_emoji = case options[:format]
+  when :audio
+    "🎧"
+  when :physical
+    "📕"
+  else
+    "📱"
+  end
+
+puts "Title: #{options[:title]}"
+puts "Author: #{options[:author]}"
+puts "Date: #{options[:date]}"
+puts "Bears: #{bear_count}"
+puts "Book Club: #{options[:book_club]}"
+puts "Format: #{format_emoji}"
+
+
+text = CGI.escapeURIComponent(<<-TEXT)
+\n\n#### #{options[:title]}, #{options[:author]} #{bear_count}#{book_club_note}
+#{options[:date]} #{format_emoji}
+
+DON'T FORGET TO UPDATE COUNT AND COUNTRY
+TEXT
+
+%x[open "bear://x-callback-url/add-text?id=#{NOTE_ID}&text=#{text}#{ADD_TEXT_OPTS}"]
+
+
+# open "bear://x-callback-url/add-text?id=CF1A8D2C-8004-4911-9945-36444E534F71&selected=no&mode=append&text=hai%20there&new_line=yes&open_note=yes&exclude_trashed=yes&show_window=yes"

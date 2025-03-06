@@ -18,3 +18,4 @@ ln -sf ~/src/dotfiles/bin/tiller ~/bin/tiller
 ln -sf ~/src/dotfiles/bin/scmp ~/bin/scmp
 ln -sf ~/src/dotfiles/bin/nukeit ~/bin/nukeit
 ln -sf ~/src/dotfiles/bin/shorter ~/bin/shorter
+ln -sf ~/src/dotfiles/bin/bookit ~/bin/bookit
