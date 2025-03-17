@@ -6,6 +6,18 @@ size = 14.0
 family = "FiraCode Nerd Font"
 style = "Light"
 
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "VictorMono Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "VictorMono Nerd Font"
+style = "Italic"
+
 [selection]
 save_to_clipboard = true
 
