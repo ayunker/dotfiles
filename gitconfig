@@ -19,17 +19,25 @@
   autoStash = true
 
 [pull]
-  rebase = false
+  rebase = true
 
 [push]
-  default = tracking
+  default = simple
   autoSetupRemote = true
+  followTags = true
 
 [init]
   defaultBranch = main
 
+[tag]
+  sort = version:refname
+
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  renames = true
+
 [alias]
-  aa = add --all
   aliases=!git config -l | grep '^alias' | cut -c 7- | sort
   ap = add -p
   b = branch
@@ -41,11 +49,9 @@
   doff = reset HEAD^
   mup = "!git checkout master && git pull && git checkout -"
   please = push --force-with-lease
-  ps = "!git push origin staging && git push staging staging:master"
-  psf = "!git push staging staging:master --force"
-  put = push origin HEAD -u
-  rbc = rebase --continue
-  rbi = rebase -i
+  ra = rebase --abort
+  rc = rebase --continue
+  ri = rebase -i
   rs = rebase --skip
   st = status -sb
   todo = "!git --no-pager diff -U0 main | rg 'TODO|debugger' | sed 's/^+//' | git --no-pager grep -nFf - 2> /dev/null"
@@ -55,6 +61,7 @@
 
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status -25
   ch = log --pretty=format:\"%C(yellow)%h %Cblue%>(12,trunc)%ad %Cgreen%<(15,trunc)%aN%Cred%d %Creset%s\" --date=relative
+
 [credential "https://github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
