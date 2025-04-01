@@ -1,10 +1,15 @@
 #!/usr/bin/env ruby
 
+# Bear Docs: https://bear.app/faq/x-callback-url-scheme-documentation/#add-text
+# X-Callback_Url Docs: https://x-callback-url.com/
+# Interactive Builder: https://bear.app/xurl/add-text/
+
 require "pry"
 require "optparse"
 require "cgi"
 
-NOTE_ID = "CF1A8D2C-8004-4911-9945-36444E534F71"
+NOTE_ID = "6F040F9E-BCEB-44AF-8FE5-BEA0C2432BDA"
+# NOTE_ID = "8BC129A2-FBAE-43FD-9CFF-11D750E79920" # show n tell note
 ADD_TEXT_OPTS = "&new_line=yes"\
   "&open_note=yes"\
   "&exclude_trashed=yes"\
