@@ -54,7 +54,7 @@
   ri = rebase -i
   rs = rebase --skip
   st = status -sb
-  todo = "!git --no-pager diff -U0 main | rg 'TODO|debugger' | sed 's/^+//' | git --no-pager grep -nFf - 2> /dev/null"
+  todo = "!git --no-pager diff -U0 main | rg 'TODO|debugger|puts|console' | sed 's/^+//' | git --no-pager grep -nFf - 2> /dev/null"
   uncommit = reset --soft HEAD^
   unstage = reset
   wip = "!git add . && git commit -m 'wip'"
