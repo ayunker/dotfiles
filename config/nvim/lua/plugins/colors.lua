@@ -13,7 +13,15 @@ return {
     lazy = false,
     priority = 1000,
     ---@type solarized.config
-    opts = {},
+    opts = {
+      variant = "autumn",
+      styles = {
+        comments = { italic = true, bold = false },
+        functions = { italic = false },
+        keywords = { italic = true },
+        variables = { italic = false },
+      }
+    },
     config = function(_, opts)
       vim.o.termguicolors = true
       vim.o.background = 'dark'
