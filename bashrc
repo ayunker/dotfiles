@@ -15,6 +15,7 @@ PS1="\[\e[32m\]\w\[\e[m\]\$(parse_git_branch) % "
 
 export EDITOR=nvim
 export JEKYLL_EDITOR=nvim
+export MANPAGER="nvim +Man!"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export SAM_CLI_TELEMETRY=0
