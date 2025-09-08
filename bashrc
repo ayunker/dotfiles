@@ -34,6 +34,8 @@ export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+test -f $(brew --prefix)/etc/bash_completion.d/git-completion.bash && . $_
+
 gb() {
   local branches branch
   branches=$(git --no-pager branch) &&
