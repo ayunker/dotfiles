@@ -63,3 +63,11 @@ vim.keymap.set('n', '<leader>gs', require('gitsigns').stage_hunk, { desc = 'Stag
 vim.keymap.set('n', 'gb', '<cmd>Git blame<cr>', { silent = true, noremap = true })
 
 vim.keymap.set('n', '<leader>ll', ':e #<CR>')
+
+vim.keymap.set('n', '<leader>yp', function()
+  vim.fn.setreg(vim.v.register, vim.fn.expand('%'))
+end, { desc = "Yank file path" })
+
+vim.keymap.set('n', '<leader>yP', function()
+  vim.fn.setreg(vim.v.register, vim.fn.expand('%:p'))
+end, { desc = "Yank file path" })
