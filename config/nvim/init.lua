@@ -141,7 +141,7 @@ local servers = {
   standardrb = {},
   ts_ls = {},
   -- solargraph = {},
-  ruby_lsp = {},
+  -- ruby_lsp = {},
 }
 
 -- Setup neovim lua configuration
