@@ -31,6 +31,14 @@ return {
   },
 
   {
+    'savq/melange-nvim',
+    priority = 1000,
+    config = function()
+      -- vim.cmd.colorscheme 'melange'
+    end,
+  },
+
+  {
     'rebelot/kanagawa.nvim',
     priority = 1000,
     config = function()
@@ -57,9 +65,9 @@ return {
   {
     'catppuccin/nvim',
     priority = 1000,
-    -- config = function()
-    --   vim.cmd.colorscheme 'catppuccin-macchiato'
-    -- end,
+    config = function()
+      -- vim.cmd.colorscheme 'catppuccin-mocha'
+    end,
   },
 
   {
