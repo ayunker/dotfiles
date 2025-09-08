@@ -18,6 +18,9 @@
   autosquash = true
   autoStash = true
 
+[merge]
+  ff = only
+
 [pull]
   rebase = true
 
