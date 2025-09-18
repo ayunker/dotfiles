@@ -71,3 +71,7 @@ end, { desc = "Yank file path" })
 vim.keymap.set('n', '<leader>yP', function()
   vim.fn.setreg(vim.v.register, vim.fn.expand('%:p'))
 end, { desc = "Yank file path" })
+
+-- try out these from helix, t.y. pirj
+vim.keymap.set('n', 'gh', '^')
+vim.keymap.set('n', 'gl', '$')
