@@ -1,0 +1,99 @@
+#!/usr/bin/env ruby
+
+require "pry"
+require "optparse"
+require "json"
+require "net/http"
+require "date"
+
+EOL_URL = "https://endoflife.date/api/v1/products/"
+
+def parse_releases_for(thing)
+  uri = URI(EOL_URL + thing.to_s)
+  response = Net::HTTP.get_response(uri)
+  JSON.parse(response.body)
+end
+
+def print_green(s) = "\e[32m#{s}\e[0m" 
+
+def print_yellow(s) = "\e[33m#{s}\e[0m" 
+
+def print_red(s) = "\e[31m#{s}\e[0m" 
+
+def print_blue(s) = "\e[34m#{s}\e[0m" 
+
+Release = Data.define(:name, :release_date, :is_eoas, :eoas_from, :is_eol, :eol_from, :is_maintained, :latest_name, :latest_date) do
+  def print
+    puts "## #{name}"
+    print_support("Active Support", is_eoas?, eoas_from) unless eoas_from.nil?
+    print_support("Security Support", is_eol?, eol_from) unless eol_from.nil?
+    puts "  * No longer maintained 😢" unless is_maintained?
+    puts "\n"
+  end
+
+  def d_print
+    puts "Name: " + name
+    puts "Release Date: " + release_date
+    puts "Is End of Active Support?: " + is_eoas.to_s
+    puts "End of Active Support From: " + eoas_from.to_s
+    puts "Is End of Life?: " + is_eol.to_s
+    puts "End of Life From: " + eol_from.to_s
+    puts "Is Maintained?: " + is_maintained.to_s
+    puts "Latest Version Name: " + latest_name
+    puts "Latest Version Date: " + latest_date.to_s
+  end
+
+  def print_support(type, ended, date)
+    if ended
+      red = print_red("#{type} Ended as of #{date}")
+      puts "  * " + red
+    else
+      pre_text = "#{type} Ends on #{date}"
+      text = too_close_for_comfort?(date) ? 
+print_yellow(pre_text) 
+        : print_green(pre_text)
+      puts "  * " + text
+    end
+  end
+
+  def is_eoas? = !!is_eoas
+  def is_eol? = !!is_eol
+  def is_maintained? = !!is_maintained
+
+  def too_close_for_comfort?(date) = (Date.today << -6) > date
+end
+
+
+options = {}
+
+OptionParser.new do |parser|
+  parser.on("--ruby", "Ruby") do |v|
+    options[:thing] = :ruby
+  end
+
+  parser.on("--rails", "Rails") do |v|
+    options[:thing] = :rails
+  end
+end.parse!
+
+thing = options[:thing]
+
+parsed = parse_releases_for(thing)
+
+releases = parsed.dig("result", "releases")
+
+pr = releases.each_with_object([]) do |r, acc|
+  acc << Release.new(
+    name: r["name"],
+    release_date: r["releaseDate"],
+    is_eoas: r["isEoas"],
+    eoas_from: (Date.parse(r["eoasFrom"]) rescue nil),
+    is_eol: r["isEol"],
+    eol_from: Date.parse(r["eolFrom"]),
+    is_maintained: r["isMaintained"],
+    latest_name: r.dig("latest", "name"),
+    latest_date: Date.parse(r.dig("latest", "date"))
+  )
+end
+
+pr.each { _1.print }

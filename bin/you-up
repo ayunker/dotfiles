@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require "net/http"
+
+SITES = {
+  ynkr: URI("https://ynkr.xyz"),
+  bookclub: URI("https://465book.club/meetings/"),
+  nazgul: URI("https://nazgul.cc"),
+  qi: URI("https://quite-indexed.com/")
+}
+
+def colorize_status(code) = code == 200 ? "\e[32m#{code}\e[0m" : "\e[31m#{code}\e0m"
+
+responses = SITES.each_with_object({}) do |(k, v), acc|
+  acc[k] = Net::HTTP.get_response(v).code.to_i
+end
+
+puts ""
+puts "# Hey, you up??"
+puts ""
+puts "All systems #{responses.values.all?(200) ? "\e[32mGREEN\e[0m" : "\e[31m... oh noes\e[0m"}"
+puts ""
+
+responses.each do |k,v|
+  puts "* #{k} - #{colorize_status(v)}"
+end
