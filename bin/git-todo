@@ -1,0 +1,13 @@
+#!/bin/sh
+
+main_exists=`git show-ref --branches main`
+if [ -n "$main_exists" ]; then
+  branch="main"
+else
+  branch="master"
+fi;
+
+git --no-pager diff -U0 $branch \
+  | rg 'TODO|debugger|puts|console|\\.only' \
+  | sed 's/^+//' \
+  | git --no-pager grep -nFf - 2> /dev/null
