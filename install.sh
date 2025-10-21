@@ -19,3 +19,5 @@ ln -sf ~/src/dotfiles/bin/scmp ~/bin/scmp
 ln -sf ~/src/dotfiles/bin/nukeit ~/bin/nukeit
 ln -sf ~/src/dotfiles/bin/shorter ~/bin/shorter
 ln -sf ~/src/dotfiles/bin/bookit ~/bin/bookit
+ln -sf ~/src/dotfiles/bin/you-up ~/bin/you-up
+ln -sf ~/src/dotfiles/bin/git-todo ~/bin/git-todo
