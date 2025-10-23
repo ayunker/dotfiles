@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+RED='\033[31m'
+NC='\033[0m'  # No Color (reset)
+
+echo -e "${RED}** BASH SCRIPTS**${NC}"
+rg '^#!/usr/bin/env bash' bin/ -l | xargs shellcheck
+
+echo -e "${RED}** RUBBY SCRIPTS**${NC}"
+rg '^#!/usr/bin/env ruby' bin/ -l | xargs standardrb
