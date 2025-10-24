@@ -10,17 +10,17 @@ require "cgi"
 
 NOTE_ID = "6F040F9E-BCEB-44AF-8FE5-BEA0C2432BDA"
 # NOTE_ID = "8BC129A2-FBAE-43FD-9CFF-11D750E79920" # show n tell note
-ADD_TEXT_OPTS = "&new_line=yes"\
-  "&open_note=yes"\
-  "&exclude_trashed=yes"\
-  "&show_window=yes"\
-  "&selected=no"\
+ADD_TEXT_OPTS = "&new_line=yes" \
+  "&open_note=yes" \
+  "&exclude_trashed=yes" \
+  "&show_window=yes" \
+  "&selected=no" \
   "&mode=append"
 
 options = {}
 
 OptionParser.new do |parser|
-  parser.on('-b', '--bears BEARS', 'The bear rating') do |v|
+  parser.on("-b", "--bears BEARS", "The bear rating") do |v|
     options[:bear_rating] = v
   end
 
@@ -50,13 +50,13 @@ bear_count = "🐻" * options[:bear_rating].to_i
 book_club_note = " (465 Book Club)" if options[:book_club]
 
 format_emoji = case options[:format]
-  when :audio
-    "🎧"
-  when :physical
-    "📕"
-  else
-    "📱"
-  end
+when :audio
+  "🎧"
+when :physical
+  "📕"
+else
+  "📱"
+end
 
 puts "Title: #{options[:title]}"
 puts "Author: #{options[:author]}"
@@ -65,15 +65,13 @@ puts "Bears: #{bear_count}"
 puts "Book Club: #{options[:book_club]}"
 puts "Format: #{format_emoji}"
 
-
-text = CGI.escapeURIComponent(<<-TEXT)
-\n\n#### #{options[:title]}, #{options[:author]} #{bear_count}#{book_club_note}
-#{options[:date]} #{format_emoji}
-
-DON'T FORGET TO UPDATE COUNT AND COUNTRY
+text = CGI.escapeURIComponent(<<~TEXT)
+  \n\n#### #{options[:title]}, #{options[:author]} #{bear_count}#{book_club_note}
+  #{options[:date]} #{format_emoji}
+  
+  DON'T FORGET TO UPDATE COUNT AND COUNTRY
 TEXT
 
-%x[open "bear://x-callback-url/add-text?id=#{NOTE_ID}&text=#{text}#{ADD_TEXT_OPTS}"]
-
+`open "bear://x-callback-url/add-text?id=#{NOTE_ID}&text=#{text}#{ADD_TEXT_OPTS}"`
 
 # open "bear://x-callback-url/add-text?id=CF1A8D2C-8004-4911-9945-36444E534F71&selected=no&mode=append&text=hai%20there&new_line=yes&open_note=yes&exclude_trashed=yes&show_window=yes"

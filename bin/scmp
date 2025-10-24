@@ -3,11 +3,10 @@
 first = ARGV.shift
 second = ARGV.shift
 
+puts first
 if first == second
-  puts first
   puts "SAME SAME SAME"
 else
-  puts first
   puts second
   puts "DIFFERENT!!!"
 end

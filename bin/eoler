@@ -14,13 +14,13 @@ def parse_releases_for(thing)
   JSON.parse(response.body)
 end
 
-def print_green(s) = "\e[32m#{s}\e[0m" 
+def print_green(s) = "\e[32m#{s}\e[0m"
 
-def print_yellow(s) = "\e[33m#{s}\e[0m" 
+def print_yellow(s) = "\e[33m#{s}\e[0m"
 
-def print_red(s) = "\e[31m#{s}\e[0m" 
+def print_red(s) = "\e[31m#{s}\e[0m"
 
-def print_blue(s) = "\e[34m#{s}\e[0m" 
+def print_blue(s) = "\e[34m#{s}\e[0m"
 
 Release = Data.define(:name, :release_date, :is_eoas, :eoas_from, :is_eol, :eol_from, :is_maintained, :latest_name, :latest_date) do
   def print
@@ -49,20 +49,21 @@ Release = Data.define(:name, :release_date, :is_eoas, :eoas_from, :is_eol, :eol_
       puts "  * " + red
     else
       pre_text = "#{type} Ends on #{date}"
-      text = too_close_for_comfort?(date) ? 
-print_yellow(pre_text) 
+      text = too_close_for_comfort?(date) ?
+        print_yellow(pre_text)
         : print_green(pre_text)
       puts "  * " + text
     end
   end
 
   def is_eoas? = !!is_eoas
+
   def is_eol? = !!is_eol
+
   def is_maintained? = !!is_maintained
 
   def too_close_for_comfort?(date) = (Date.today << -6) > date
 end
-
 
 options = {}
 
@@ -87,7 +88,11 @@ pr = releases.each_with_object([]) do |r, acc|
     name: r["name"],
     release_date: r["releaseDate"],
     is_eoas: r["isEoas"],
-    eoas_from: (Date.parse(r["eoasFrom"]) rescue nil),
+    eoas_from: begin
+      Date.parse(r["eoasFrom"])
+    rescue
+      nil
+    end,
     is_eol: r["isEol"],
     eol_from: Date.parse(r["eolFrom"]),
     is_maintained: r["isMaintained"],
