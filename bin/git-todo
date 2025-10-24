@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-main_exists=`git show-ref --branches main`
+main_exists=$(git show-ref --branches main)
 if [ -n "$main_exists" ]; then
   branch="main"
 else
