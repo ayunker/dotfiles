@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# listdb - list databases on your postgres server
+
+# Mac `head` doesn't support negative numbers in -n arg, so use GNU head instead
+
+psql -l \
+  | tail -n +4 \
+  | ghead -n -2 \
+  | awk NF=1 \
+  | rg '\w+' --color=never

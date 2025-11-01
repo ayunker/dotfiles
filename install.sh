@@ -21,3 +21,4 @@ ln -sf ~/src/dotfiles/bin/shorter ~/bin/shorter
 ln -sf ~/src/dotfiles/bin/bookit ~/bin/bookit
 ln -sf ~/src/dotfiles/bin/you-up ~/bin/you-up
 ln -sf ~/src/dotfiles/bin/git-todo ~/bin/git-todo
+ln -sf ~/src/dotfiles/bin/listdb ~/bin/listdb
