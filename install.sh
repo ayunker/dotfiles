@@ -5,7 +5,7 @@ ln -sf ~/src/dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/src/dotfiles/aliases ~/.aliases
 ln -sf ~/src/dotfiles/ripgreprc ~/.ripgreprc
 ln -sf ~/src/dotfiles/vimrc ~/.vimrc
-ln -sf ~/src/dotfiles/config/nvim/init.vim ~/.config/nvim/init.vim
+ln -sf ~/src/dotfiles/config/nvim ~/.config/nvim
 ln -sf ~/src/dotfiles/config/bat/config ~/.config/bat/config
 ln -sf ~/src/dotfiles/wezterm.lua ~/.wezterm.lua
 ln -sf ~/src/dotfiles/config/alacritty ~/.config/alacritty
