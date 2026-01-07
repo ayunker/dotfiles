@@ -40,3 +40,9 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 
 vim.o.colorcolumn = '80'
+
+-- Folding
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+-- i don't want anything folded by default
+vim.o.foldlevel = 99

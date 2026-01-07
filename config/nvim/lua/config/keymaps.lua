@@ -75,3 +75,6 @@ end, { desc = "Yank full file path" })
 -- try out these from helix, t.y. pirj
 vim.keymap.set('n', 'gh', '^')
 vim.keymap.set('n', 'gl', '$')
+
+-- fold mappings
+vim.keymap.set('n', 'zl', 'za')
