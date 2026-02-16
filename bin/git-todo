@@ -9,6 +9,6 @@ else
 fi;
 
 git --no-pager diff -U0 $branch \
-  | rg 'TODO|debugger|puts|console|\\.only' \
+  | rg 'TODO|debugger|binding.pry|puts|console|\\.only' \
   | sed 's/^+//' \
   | git --no-pager grep -nFf - 2> /dev/null
