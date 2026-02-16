@@ -64,6 +64,7 @@
 
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status -25
   ch = log --pretty=format:\"%C(yellow)%h %Cblue%>(12,trunc)%ad %Cgreen%<(15,trunc)%aN%Cred%d %Creset%s\" --date=relative
+  me = ch --author='Tony Yunker' -25
 
 [credential "https://github.com"]
 	helper = 
