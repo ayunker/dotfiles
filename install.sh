@@ -23,3 +23,4 @@ ln -sf ~/src/dotfiles/bin/you-up ~/bin/you-up
 ln -sf ~/src/dotfiles/bin/git-todo ~/bin/git-todo
 ln -sf ~/src/dotfiles/bin/listdb ~/bin/listdb
 ln -sf ~/src/dotfiles/bin/catbin ~/bin/catbin
+ln -sf ~/src/dotfiles/bin/alphabet ~/bin/alphabet
