@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# catbin [input] - essentially cat "$(which foo)"
+
+# borrowed/stolen from Evan Hahn's dotfiles
+# https://codeberg.org/EvanHahn/dotfiles/src/commit/843b9ee13d949d346a4a73ccee2a99351aed285b/home/bin/bin/catbin
+
+set -e
+set -u
+
+if [[ $# != 1 ]]; then
+  echo 'usage: echobin something_in_your_path' >&2
+  exit 1
+fi
+
+if hash bat 2>/dev/null; then
+  cat_command=bat
+else
+  # shellcheck disable=SC2209
+  cat_command=cat
+fi
+
+exec "$cat_command" "$(command -v "$1")"
