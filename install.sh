@@ -25,3 +25,4 @@ ln -sf ~/src/dotfiles/bin/listdb ~/bin/listdb
 ln -sf ~/src/dotfiles/bin/catbin ~/bin/catbin
 ln -sf ~/src/dotfiles/bin/alphabet ~/bin/alphabet
 ln -sf ~/src/dotfiles/bin/nato ~/bin/nato
+ln -sf ~/src/dotfiles/bin/httpstatus ~/bin/httpstatus
