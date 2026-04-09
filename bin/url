@@ -1,0 +1,31 @@
+#!/usr/bin/env ruby
+# url [url] - print deconstructed url parts
+
+# ruby implementation of Evan Hahn's `url` script
+# https://codeberg.org/EvanHahn/dotfiles/src/commit/843b9ee13d949d346a4a73ccee2a99351aed285b/home/bin/bin/url
+
+require "cgi"
+require "uri"
+require "pry"
+
+input = ARGV[0]
+
+uri = URI.parse(input)
+
+puts "# original: #{input}"
+puts "# protocol: #{uri.scheme}"
+
+puts "# username: #{uri.user}" if uri.user
+puts "# password: #{uri.password}" if uri.password
+puts "# hostname: #{uri.hostname}" if uri.hostname
+puts "# port: #{uri.port}" if uri.port
+puts "# path: #{uri.path}" if uri.path
+
+if uri.query
+  puts "# query: #{uri.query}"
+  CGI.parse(uri.query).each do |k, v|
+    puts "# - #{k} #{v.first}"
+  end
+end
+
+puts "# fragment: #{uri.fragment}" if uri.fragment

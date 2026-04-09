@@ -1,3 +1,13 @@
+# TODO: wire this up
+function setup() {
+    SRC="$1"
+    DST="$2"
+    echo "Installing $SRC..."
+
+    mkdir -p $(dirname "$DST")
+    ln -sfn "$PWD/$SRC" "$DST"
+}
+
 ln -sf ~/src/dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/src/dotfiles/bash_profile ~/.bash_profile
 ln -sf ~/src/dotfiles/bashrc ~/.bashrc
@@ -26,3 +36,4 @@ ln -sf ~/src/dotfiles/bin/catbin ~/bin/catbin
 ln -sf ~/src/dotfiles/bin/alphabet ~/bin/alphabet
 ln -sf ~/src/dotfiles/bin/nato ~/bin/nato
 ln -sf ~/src/dotfiles/bin/httpstatus ~/bin/httpstatus
+ln -sf ~/src/dotfiles/bin/url ~/bin/url
