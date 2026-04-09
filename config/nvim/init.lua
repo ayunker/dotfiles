@@ -54,7 +54,7 @@ pcall(require('telescope').load_extension, 'fzf')
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
-require('nvim-treesitter.configs').setup {
+require('nvim-treesitter').setup {
   -- Add languages to be installed here that you want installed for treesitter
   ensure_installed = { 'c', 'cpp', 'elixir', 'gleam', 'go', 'javascript', 'lua', 'markdown', 'markdown_inline', 'python', 'ruby', 'rust', 'tsx',
     'typescript',
